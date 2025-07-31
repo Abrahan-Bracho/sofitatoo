@@ -1,0 +1,200 @@
+
+:root{
+    --Vinotinto_claro : #2D2D2D;
+    --Vinotinto :#4A1A1A ;
+    --negro: #000000;
+    --gris_claro_metalico: #8c8c8c  ;
+}
+
+
+.body{
+    background-color: var(--gris_claro_metalico);
+}
+.header_continer{
+    background: url(../img/fondo_gotico.jpg) repeat center center fixed; 
+    width: 100%;
+    height: 50vh;
+    display: flex;flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 5vh;
+    border-bottom: solid var(--negro) 3PX;
+}
+
+.logo{
+    width: 100%;
+    height: 39vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.contenedor_boton_opciones{
+    width: 100%;
+    height: 39vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boto_de_opciones{
+    background-color: var(--gris_claro_metalico);
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: space-evenly;
+    border: solid #000000;
+    transition: 0.5S;
+}
+.boto_de_opciones:hover{
+    height: 16vw;
+    width: 16vw;
+    background-color: #cac8c8;
+    box-shadow: 0px 0px 20px 0px var(--negro);
+    transition: 0.5S;
+}
+.linea_boton_opciones{
+    width: 50%;
+    height: 5px;
+    background-color: var(--negro);
+    margin: 1px;
+    padding: 0;
+    border-style: 5px;
+}
+
+/*   barra de opciones--------------------------*/
+
+.barra_opciones{background: #4A1A1A;
+    background: linear-gradient(179deg,rgba(74, 26, 26, 1) 0%, rgba(73, 26, 26, 1) 39%, rgba(0, 0, 0, 1) 100%);
+    border: solid var(--negro);
+    height: 90%;
+    width: 90%;
+    position: fixed;
+    top: 5%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 0 var(--Vinotinto_claro);
+}
+
+.boton_X_opciones{
+    max-width: 100%;
+
+}
+.boton_X_opciones img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    padding-bottom: 3px;
+    transition: 0.5s;
+}
+.boton_X_opciones img:hover{
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+}
+.logo_opciones{
+    max-width: 100px;
+    max-height: 100px;
+    margin: 1em 1em 2em 1em;
+    text-align: center;
+}
+.opcion{
+    text-align: end;
+    color: var(--gris_claro_metalico);
+    padding: 0px;
+    margin: 30px;
+    font-size: 7vh;
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.contenedor_opcion_redes{
+    border-top: 3px solid var(--negro);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opcion_redes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.opcion_redes img{
+    width: 50px;
+    margin: 10px;
+}
+
+
+
+/* --------------- apratir de aqui es la mini galera de tatuajes--------- */
+
+.h2{
+    background-image: url(../img/fondo_gotico.jpg);
+    text-align: center;
+    max-width: 100%;
+    font-size: 2em;
+    padding: 10px;
+    color: var(--gris_claro_metalico);
+    border-bottom: solid 3px var(--negro);
+}
+
+.contenedor_mini_galeria{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedor_foto_tatuaje{
+    max-width: 45%;
+    margin-bottom: 20px;
+    background-color: #4A1A1A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    transition: 0.5;
+}
+.contenedor_foto_tatuaje:hover{
+    max-width: 90%;
+    transition: 2;
+}
+.contenedor_foto_tatuaje img{
+    max-width: 100%;
+    height: 100%;
+    border: solid 3px var(--Vinotinto_claro);
+    border-radius: 5px;
+}
+
+
+.boton_ver_mas{
+    color: var(--gris_claro_metalico);
+    padding: 10px;
+    margin: 30px;
+    font-size: 7vh;
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--Vinotinto);
+    border: solid 3px var(--negro);
+    text-decoration: none;
+}
