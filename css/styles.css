@@ -67,6 +67,20 @@
     padding: 0;
     border-style: 5px;
 }
+@media only screen and (min-width: 768px) {
+    .header_continer {
+        height: 60vh;
+    }
+    .boto_de_opciones {
+    width: 13vh;
+    height: 13vh;
+    }
+    .boto_de_opciones:hover {
+    width: 14vh;
+    height: 14vh;
+    }
+
+}
 
 /*   barra de opciones--------------------------*/
 
@@ -115,9 +129,10 @@
     text-align: end;
     color: var(--gris_claro_metalico);
     padding: 0px;
-    margin: 30px;
+    margin: 0px;
     font-size: 7vh;
     width: 90%;
+    height: 100%;
     text-align: center;
     border-radius: 20px;
 
@@ -137,7 +152,8 @@
     
 }
 .opcion_redes img{
-    width: 50px;
+    width: 7vh;
+    height: 7vh;
     margin: 10px;
 }
 
@@ -169,7 +185,7 @@
 /* --------------- apratir de aqui es la mini galera de tatuajes--------- */
 
 .h2{
-    background-image: url(../img/fondo_gotico.jpg);
+    background: url(../img/fondo_gotico.jpg) repeat center center fixed; 
     text-align: center;
     max-width: 100%;
     font-size: 2em;
@@ -180,7 +196,7 @@
 
 .contenedor_mini_galeria{
     width: 100%;
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -188,7 +204,7 @@
 }
 
 .contenedor_foto_tatuaje{
-    max-width: 45%;
+    max-width: 80%;
     margin-bottom: 20px;
     background-color: #4A1A1A;
     display: flex;
@@ -198,7 +214,7 @@
     transition: 0.5;
 }
 .contenedor_foto_tatuaje:hover{
-    max-width: 90%;
+    max-width: 80%;
     transition: 2;
 }
 .contenedor_foto_tatuaje img{
