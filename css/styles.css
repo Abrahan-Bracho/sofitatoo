@@ -141,6 +141,29 @@
     margin: 10px;
 }
 
+/*---------presentacion-------------*/
+
+.presentacion{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentacion p {
+    width: 95%;
+    border: solid 3px;
+    border-radius: 20px;
+}
+.presentacion img{
+    height: 40px;
+    width: 100%;
+
+}
+
+
 
 
 /* --------------- apratir de aqui es la mini galera de tatuajes--------- */
