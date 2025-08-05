@@ -24,3 +24,31 @@ if(document.getElementById("boton_X_opciones")){
             });
     }
 }
+
+
+if(document.getElementById("contenedor_mini_galeria")){
+    window.onscroll = function() {
+            var y = window.scrollY;
+            if(y >= 200){
+                console.log("va bien");
+                 gsap.to("#contenedor_foto_tatuaje", {
+                     display: "block",
+                     duration: 4, 
+                });
+                // gsap.to("#contenedor_datos1", {
+                //     display: "block"
+                // });
+            }
+            if(y <= 50){
+                console.log("va bien2");
+                // gsap.to("#estudio", {
+                //     width: "0%",
+                //     duration: 2, 
+                // });
+                // gsap.to("#contenedor_datos1", {
+                //     display: "none"
+                // });
+            }
+            console.log(y);
+    };
+}
