@@ -12,6 +12,7 @@
     background: var(--gris_claro_metalico);
 }
 
+
 .unifrakturmaguntia-regular {
   font-family: "UnifrakturMaguntia", cursive;
   font-weight: 400;
@@ -64,7 +65,7 @@
     justify-items: center;
     align-items: center;
     align-content: space-evenly;
-    border: solid #000000;
+    border: double #000000;
     transition: 0.5S;
 }
 .boto_de_opciones:hover{
@@ -113,6 +114,7 @@
     align-items: center;
     border-radius: 20px;
     box-shadow: 0 10px 20px 0 var(--Vinotinto_claro);
+    z-index: 10;
 }
 
 .boton_X_opciones{
@@ -186,7 +188,7 @@
   
 }
 .presentacion p {
-    width: 95%;
+    max-width: 95%;
     border-radius: 20px;
     background-color: var(--gris_claro_metalico);
     margin: 10px;
@@ -251,10 +253,6 @@
     transition: 0.5;
     
 }
-.contenedor_foto_tatuaje:hover{
-    max-width: 80%;
-    transition: 2;
-}
 .contenedor_foto_tatuaje img{
     max-width: 100%;
     height: 100%;
@@ -263,15 +261,17 @@
 
 
 .boton_ver_mas{
+    background-image: url(../img/fondo_gotico.jpg);
     color: var(--gris_claro_metalico);
     padding: 10px 30px;
     margin: 30px;
     font-size: 2rem;
     text-align: center;
     border-radius: 20px;
-    background-color: var(--Vinotinto);
+    /* background-color: var(--Vinotinto); */
     border: solid 3px var(--negro);
     text-decoration: none;
+    background-attachment: fixed;
 }
 @media only screen and (min-width: 768px) {
     .h2{
@@ -283,8 +283,332 @@
         width: 30%;
         margin-bottom: 30px;
     }
+
     .linea_decrativa2{
         display: none;
     }
 
 }    
+
+
+/*----------precentacion artista ------------*/
+
+
+.contenedor_artista{
+    margin: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contenedor_artista h2{
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 2rem;
+}
+.img_artista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foto_ale{
+    width: 80%;
+    border: solid;
+    border-radius: 20px;
+    clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+    z-index: 2;
+}
+.esquinita_gotica{
+    width: 80%; 
+    position: absolute;
+    z-index: 1;
+}
+.informacion_artista{
+   text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.informacion_artista h3{
+    font-size: 2rem;
+    font-family: "UnifrakturMaguntia", cursive;
+    margin: 20px 0 10px 0;
+    border-bottom: solid 3px var(--negro);
+}
+.informacion_artista P{
+    text-align: center;
+    background-color: var(--Vinotinto_claro);
+    WIDTH: 60%;
+    padding: 20px;
+    font-size: 1rem;
+    color: var(--gris_claro_metalico);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+.mirar_mas{
+    font-family: "UnifrakturMaguntia", cursive;
+}
+
+
+
+/* --------------------------------------opiniones de crientes ------------------------ */
+
+.testimonios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.testimonios h3{
+    background-image: url(../img/fondo_gotico.jpg);
+    background-attachment: fixed;
+    padding: 30px;
+    width: 70%;
+    color: var(--gris_claro_metalico);
+    border: solid 3px var(--negro);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.comentarios{
+    display: flex;
+    align-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.comentarios p{
+    
+    background-color: var(--Vinotinto_claro);
+    border-radius: 20px;
+    width: 20%;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    word-wrap: break-word;
+    color: var(--gris_claro_metalico);
+}
+
+
+
+/* ---------------------------------Datos de cuentas y contactos---------------- */
+
+
+.contactos_contenedor{
+    width: 100%;
+}
+.cuntactos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.telefono{
+    background-color: var(--Vinotinto_claro);
+    padding: 10px;
+    margin: 20px;
+    color: var(--gris_claro_metalico);
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.redeses_contactos{
+    background-color: var(--Vinotinto_claro);
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--gris_claro_metalico);
+    border-radius: 20px;
+}
+
+.redeses_contactos   a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid var(--gris_claro_metalico) 3px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    width: 70%;
+}
+
+.redeses_contactos a p{
+    margin: 5px;
+    color: var(--gris_claro_metalico);
+    text-decoration: none;
+}
+
+.redeses_contactos a img{
+    width: 40px;
+}
+
+
+.pagos{
+    background-color: var(--Vinotinto);
+    margin: 20px;
+    padding: 10px;
+    color: var(--gris_claro_metalico);
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    border: solid 3px var(--negro);
+}
+
+.pagos  h3{
+    width: 100%;
+    border-bottom: solid 3px var(--negro);
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.metodo_de_pago{
+    border: solid var(--negro);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.metodo_de_pago h4{
+    text-align: center;
+    border-bottom: 3px solid var(--negro);
+    padding: 10px;
+
+}
+
+
+
+
+
+
+
+/* ----------------------footer------------------------------ */
+
+
+.footer{
+    background-color: var(--Vinotinto_claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alejandra_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin: 10px 0 0 0 ;  
+}
+.alejandra_footer img{
+    max-width: 40px;
+}
+.alejandra_footer p{
+    color: var(--gris_claro_metalico);
+}
+.autor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    
+}
+.autor a{
+    text-decoration: none;
+}
+.hecho_por{
+    padding: 10px;
+    font-family: "UnifrakturMaguntia", cursive;
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--gris_claro_metalico);
+}
+
+.nombre_abrahan {
+    text-decoration: none;
+    color: var(--gris_claro_metalico);
+    border: solid 3px var(--gris_claro_metalico);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px;
+    background-color: var(--Vinotinto);
+}
+
+.redes_footer{
+    background-color: var(--Vinotinto_claro);
+
+}
+.redes_footer img{
+    max-width: 40px;
+    margin: 0 5px 0 5px ;
+}
+
+@media only screen and (min-width: 768px) {
+.footer{
+    background-color: var(--Vinotinto_claro);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer img{
+    max-width: 40px;
+}
+.footer p{
+    color: var(--gris_claro_metalico);
+}
+.autor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    
+}
+.autor a{
+    text-decoration: none;
+}
+.hecho_por{
+    padding: 10px;
+    font-family: "UnifrakturMaguntia", cursive;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nombre_abrahan {
+    text-decoration: none;
+    color: var(--gris_claro_metalico);
+    border: solid 3px var(--gris_claro_metalico);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px;
+    background-color: var(--Vinotinto);
+}
+
+.redes_footer{
+    background-color: var(--Vinotinto_claro);
+
+}
+.redes_footer img{
+    max-width: 40px;
+    margin: 0 5px 0 5px ;
+}
+
+}
