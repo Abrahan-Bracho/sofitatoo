@@ -431,6 +431,7 @@
 .estilos p{
     color: var(--gris_claro_metalico);
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .contenedor_estilos{
