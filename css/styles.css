@@ -64,7 +64,7 @@
     justify-items: center;
     align-items: center;
     align-content: space-evenly;
-    border: double #000000;
+    border: solid #000000;
     transition: 0.5S;
 }
 .boto_de_opciones:hover{
@@ -391,23 +391,160 @@
 }
 .comentarios{
     display: flex;
-    align-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 
 }
 .comentarios p{
     
     background-color: var(--Vinotinto_claro);
     border-radius: 20px;
-    width: 20%;
+    width: 90%;
     margin: 10px;
     padding: 30px;
     text-align: center;
     word-wrap: break-word;
     color: var(--gris_claro_metalico);
 }
+
+
+/* ----------------------estilos------------------------------ */
+
+
+.estilos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo_gotico.jpg);
+    background-attachment: fixed;
+    border-top: 5px solid var(--negro);
+
+}
+
+.estilos h3{
+    font-family:  "UnifrakturMaguntia", cursive;
+    color: var(--gris_claro_metalico);
+    font-size: 3rem;
+    text-shadow: 0px 10px 10px var(--negro);
+}
+.estilos p{
+    color: var(--gris_claro_metalico);
+    font-size: 1.5rem;
+}
+
+.contenedor_estilos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.estilo{
+    width: 45%;
+    height: 30vh;
+    border: solid 3px var(--negro);
+    padding: 5px;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: var(--Vinotinto_claro);
+    color: var(--gris_claro_metalico);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.estilo img{
+    width: 100%;
+    border-radius: 20px;
+
+    height: 50%;
+    margin: 5PX;
+
+}
+.estilo h4{
+    font-family:  "UnifrakturMaguntia", cursive;
+    font-size: 2rem;
+    border-bottom: solid 3px var(--gris_claro_metalico);
+    box-shadow: 0px 10px 10px var(--Vinotinto);
+    width: 100%;
+}
+.estilo p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------promociones---------------------- */
+
+.Contenedor_promociones{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Vinotinto_claro);
+    margin: 20px 0;
+    color: var(--gris_claro_metalico);
+}
+.Contenedor_promociones h3{
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 3rem;
+    color: var(--gris_claro_metalico1);
+}
+.Contenedor_promociones p{
+    font-size: 1.5rem;
+}
+
+.promociones{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promocion{
+    width: 95%;
+    margin: 10px;
+    border: solid 3px var(--gris_claro_metalico);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: var(--Vinotinto);
+}
+.promocion h4{
+    text-align: center;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 2rem;
+    margin: 10px 0;
+    color: var(--gris_claro_metalico);
+}
+.promocion p{
+    text-align: center;
+    color: var(--gris_claro_metalico);
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.promocion img{
+    max-width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+}
+
+
+
+
 
 
 
