@@ -25,80 +25,40 @@ if(document.getElementById("boton_X_opciones")){
     }
 }
 
-// Animación on scroll para imágenes de la mini galería en index.html
+// Animación futurista con triángulos y clip-path para imágenes de la galería y mini galería
 if (document.getElementById("contenedor_mini_galeria")) {
     const miniGaleriaImgs = document.querySelectorAll("#contenedor_mini_galeria .contenedor_foto_tatuaje");
 
-    // Inicialmente ocultar y posicionar abajo las imágenes y aplicar clip-path cerrado
+    // Estado inicial: triángulo pequeño en la esquina superior izquierda
     miniGaleriaImgs.forEach(img => {
-        gsap.set(img, { opacity: 0, y: 50, clipPath: "inset(0 0 100% 0)" });
+        gsap.set(img, { 
+            opacity: 0, 
+            y: 50, 
+            clipPath: "polygon(0 0, 0 0, 0 0, 0 0)" // Triángulo colapsado
+        });
     });
 
     function animarMiniGaleria() {
         miniGaleriaImgs.forEach((img, i) => {
             const rect = img.getBoundingClientRect();
-
-            if (rect.top < window.innerHeight - 50) {
-                
-
-                if (!img.dataset.visible) {
-                    gsap.to(img, {
-                        opacity: 1,
-                        y: 0,
-                        clipPath: "polygon(62% 0, 100% 0, 0 59%, 0 0)",
-                        duration: 1,
-                        delay: i * 0.1,
-                        ease: "power2.out"
-                    });
-                    
-                    
-                }
-            }
-            if (rect.top < window.innerHeight - 80) {
-
-                if (!img.dataset.visible) {
-                    gsap.to(img, {
-                        opacity: 1,
-                        y: 0,
-                        clipPath: "polygon(100% 0, 100% 60%, 0 59%, 0 0)",
-                        duration: 1,
-                        delay: i * 0.1,
-                        ease: "power2.out"
-                    });
-                    
-                    
-                }
-            } 
-            if (rect.top < window.innerHeight - 80) {
-
-                if (!img.dataset.visible) {
-                    gsap.to(img, {
-                        opacity: 1,
-                        y: 0,
-                        clipPath: "polygon(100% 0, 100% 100%, 0 64%, 0 0)",
-                        duration: 1,
-                        delay: i * 0.1,
-                        ease: "power2.out"
-                    });
-                    
-                    
-                }
-            } 
-            if (rect.top < window.innerHeight - 50) {
-                
-
-                if (!img.dataset.visible) {
-                    gsap.to(img, {
-                        opacity: 1,
-                        y: 0,
-                        clipPath: "polygon(100% 0, 100% 100%, 0 100%, 0 0)",
-                        duration: 1,
-                        delay: i * 0.1,
-                        ease: "power2.out"
-                    });
-                    
-                    img.dataset.visible = "true";
-                }
+            if (rect.top < window.innerHeight - 50 && !img.dataset.visible) {
+                // Animación: triángulo se expande a toda la imagen
+                gsap.to(img, {
+                    opacity: 1,
+                    y: 0,
+                    clipPath: "polygon(100% 0, 100% 73%, 0 38%, 0 0)", // Triángulo grande
+                    duration: 0.5,
+                    delay: i * 0.08,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        gsap.to(img, {
+                            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Imagen completa
+                            duration: 0,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+                img.dataset.visible = "true";
             }
         });
     }
@@ -107,5 +67,8 @@ if (document.getElementById("contenedor_mini_galeria")) {
     window.addEventListener('DOMContentLoaded', animarMiniGaleria);
     animarMiniGaleria();
 }
+           
+        
+
 
 

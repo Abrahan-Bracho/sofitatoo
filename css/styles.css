@@ -249,13 +249,18 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 20px;
+    border: solid 3px var(--negro);
     transition: box-shadow 0.5s;
-    /* Quitar/evitar transición de opacity/y aquí para no interferir con GSAP */
+    overflow: hidden;
+    /* Para asegurar que el efecto de clip-path se vea bien */
+    will-change: clip-path, opacity, transform;
 }
 .contenedor_foto_tatuaje img{
     max-width: 100%;
     height: 100%;
     border-radius: 5px;
+    /* Si quieres animar el clip-path sobre la imagen directamente, agrega: */
+     transition: clip-path 0.5s cubic-bezier(0.4,0,0.2,1); 
 }
 
 
