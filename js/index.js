@@ -41,35 +41,19 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
 if (document.getElementById("contenedor_mini_galeria")) {
     const miniGaleriaImgs = document.querySelectorAll("#contenedor_mini_galeria .contenedor_foto_tatuaje");
 
-    // Estado inicial: triángulo pequeño en la esquina superior izquierda
+    // Estado inicial: oculto y clip-path cerrado
     miniGaleriaImgs.forEach(img => {
-        gsap.set(img, { 
-            opacity: 0, 
-            y: 50, 
-            clipPath: "polygon(0 0, 0 0, 0 0, 0 0)" // Triángulo colapsado
-        });
+        img.style.opacity = "0";
+        img.style.clipPath = "polygon(0 0, 0 0, 0 100%, 0 100%)";
+        img.style.animation = "none";
     });
 
     function animarMiniGaleria() {
         miniGaleriaImgs.forEach((img, i) => {
             const rect = img.getBoundingClientRect();
             if (rect.top < window.innerHeight - 50 && !img.dataset.visible) {
-                // Animación: triángulo se expande a toda la imagen
-                gsap.to(img, {
-                    opacity: 1,
-                    y: 0,
-                    clipPath: "polygon(100% 0, 100% 73%, 0 38%, 0 0)", // Triángulo grande
-                    duration: 0.5,
-                    delay: i * 0.08,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        gsap.to(img, {
-                            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Imagen completa
-                            duration: 0,
-                            ease: "power2.out"
-                        });
-                    }
-                });
+                img.style.opacity = "1";
+                img.style.animation = "cargarTriangulos 1.5s linear forwards";
                 img.dataset.visible = "true";
             }
         });

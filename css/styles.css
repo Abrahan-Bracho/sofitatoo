@@ -270,21 +270,48 @@
     filter: invert(1);
 }
 
+.contenedordelcontenedorfototatuaje{
+    background-color: var(--gris_claro_metalico);
+   padding: 0;
+   border-radius: 5px;
+   margin: 5px 0;
+}
+.fonditonegrito{
+    background-color: var(--Vinotinto_claro)
+}
+
+
 .contenedor_foto_tatuaje{
     max-width: 100%;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     background-color: #4A1A1A;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
     border: solid 3px var(--negro);
-    transition: box-shadow 0.5s;
     overflow: hidden;
     /* Para asegurar que el efecto de clip-path se vea bien */
-    will-change: clip-path, opacity, transform;
     transition: 0.5s;
+    background-color: var(--Vinotinto_claro);
+}
+
+
+  
+
+@keyframes cargarTriangulos {
+  10% { clip-path: polygon(25% 0%, 24% 0, 26% 0, 0 24%, 0 23%, 0 0); }
+  20% { clip-path: polygon(30% 0, 68% 0, 41% 17%, 23% 14%, 0 22%, 0 0); }
+  30% { clip-path: polygon(30% 0, 100% 0, 84% 24%, 48% 8%, 0 22%, 0 0); }
+  40% { clip-path: polygon(30% 0, 100% 0, 100% 34%, 48% 14%, 0 22%, 0 0); }
+  50% { clip-path: polygon(0 0, 100% 0, 100% 34%, 48% 25%, 39% 58%, 0 35%); }
+  60% { clip-path: polygon(0 0, 100% 0, 100% 59%, 48% 25%, 39% 58%, 0 35%); }
+  70% { clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 35%); }
+  80% { clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 79%); }
+  90% { clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 36% 86%, 0 79%); }
+  95% { clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 0 100%, 0 79%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 79%); }
 }
 
 
@@ -310,6 +337,10 @@
     text-decoration: none;
     background-attachment: fixed;
 }
+
+
+
+
 @media only screen and (min-width: 768px) {
     .trabajos{
         display: flex;
@@ -320,8 +351,8 @@
         width: 100%;
     }
 
-    .contenedor_foto_tatuaje{
-        max-width: 30%;
+    .contenedordelcontenedorfototatuaje{
+     max-width: 30%;
         width: 30%;
         margin-bottom: 30px;
     }
@@ -333,7 +364,7 @@
         width: 70%;
     }
     .contenedor_foto_tatuaje:hover{
-    scale: 1.3;
+    scale: 1.11;
     z-index: 1;
     transition: 0.5s;
     }
@@ -447,9 +478,10 @@
 }
 .comentarios{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
+    align-items: center;  
 
 }
 .comentario p{
@@ -457,40 +489,66 @@
     word-wrap: break-word;
     color: var(--gris_claro_metalico);
     font-family: fantasy;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 5px;
-    padding: 0 30px;
+    font-size: 1rem;
+    padding: 0 5px;
     background-color: #2d2d2d38;
 }
 .comentario h4{
     font-family:  "UnifrakturMaguntia", cursive;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--gris_claro_metalico);
-    padding: 5px 0;
-    position: absolute;
-    top: 5px;
+    padding: 5px 5px;
 }
 
 .comentario{
-    width: 70%;
+    width: 90%;
     height: 100%;
     background-color: var(--Vinotinto_claro);
     border-radius: 5px;
     margin: 10px 0px;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 5px;
-    clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+    flex-direction: row;
+    padding: 10px;
     text-align: center;
     position: relative;
-}
-.comentario img{
-    width: 100%;
-    border-radius: 5px;
+
+
 }
 
+
+
+
+
+
+.comentario img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+@media only screen and (min-width: 768px) {
+    .testimonios{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor_testimonios{
+        width: 100%;
+        display: flex;
+    flex-direction: column;
+        align-items: center;
+    }
+    .comentarios{
+        justify-content: center;
+        width: 90%;
+    }
+    .comentario{
+        width: 70%;
+        margin: 20px 0px;
+        justify-content: center;
+    }
+
+}
 
 /* ----------------------estilos------------------------------ */
 
