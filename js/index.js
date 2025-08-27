@@ -53,7 +53,7 @@ if (document.getElementById("contenedor_mini_galeria")) {
             const rect = img.getBoundingClientRect();
             if (rect.top < window.innerHeight - 50 && !img.dataset.visible) {
                 img.style.opacity = "1";
-                img.style.animation = "cargarTriangulos 1.5s linear forwards";
+                img.style.animation = "cargarTriangulos 0.7s linear forwards";
                 img.dataset.visible = "true";
             }
         });

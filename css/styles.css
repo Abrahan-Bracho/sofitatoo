@@ -267,13 +267,13 @@
 .linea_decrativa2{
     width: 100%;
     height: 30px;
-    filter: invert(1);
+    /* filter: invert(1); */
 }
 
 .contenedordelcontenedorfototatuaje{
     background-color: var(--gris_claro_metalico);
    padding: 0;
-   border-radius: 5px;
+   border-radius: 3px;
    margin: 5px 0;
 }
 .fonditonegrito{
@@ -289,8 +289,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-radius: 5px;
-    border: solid 3px var(--negro);
+    border-radius: 3px;
+    border: solid 1px var(--negro);
     overflow: hidden;
     /* Para asegurar que el efecto de clip-path se vea bien */
     transition: 0.5s;
@@ -301,17 +301,17 @@
   
 
 @keyframes cargarTriangulos {
-  10% { clip-path: polygon(25% 0%, 24% 0, 26% 0, 0 24%, 0 23%, 0 0); }
-  20% { clip-path: polygon(30% 0, 68% 0, 41% 17%, 23% 14%, 0 22%, 0 0); }
-  30% { clip-path: polygon(30% 0, 100% 0, 84% 24%, 48% 8%, 0 22%, 0 0); }
-  40% { clip-path: polygon(30% 0, 100% 0, 100% 34%, 48% 14%, 0 22%, 0 0); }
-  50% { clip-path: polygon(0 0, 100% 0, 100% 34%, 48% 25%, 39% 58%, 0 35%); }
-  60% { clip-path: polygon(0 0, 100% 0, 100% 59%, 48% 25%, 39% 58%, 0 35%); }
-  70% { clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 35%); }
-  80% { clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 79%); }
-  90% { clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 36% 86%, 0 79%); }
-  95% { clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 0 100%, 0 79%); }
-  100% { clip-path: polygon(0 0, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 79%); }
+  10% { opacity: 0%; clip-path: polygon(25% 0%, 24% 0, 26% 0, 0 24%, 0 23%, 0 0); }
+  20% { opacity: 0%;clip-path: polygon(30% 0, 68% 0, 41% 17%, 23% 14%, 0 22%, 0 0); }
+  30% { opacity: 10%; clip-path: polygon(30% 0, 100% 0, 84% 24%, 48% 8%, 0 22%, 0 0); }
+  40% { opacity: 10%; clip-path: polygon(30% 0, 100% 0, 100% 34%, 48% 14%, 0 22%, 0 0); }
+  50% { opacity: 20%; clip-path: polygon(0 0, 100% 0, 100% 34%, 48% 25%, 39% 58%, 0 35%); }
+  60% { opacity: 40%; clip-path: polygon(0 0, 100% 0, 100% 59%, 48% 25%, 39% 58%, 0 35%); }
+  70% { opacity: 50%; clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 35%); }
+  80% { opacity: 60%; clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 79%); }
+  90% { opacity: 80%; clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 36% 86%, 0 79%); }
+  95% { opacity: 90%; clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 0 100%, 0 79%); }
+  100% { opacity: 100%; clip-path: polygon(0 0, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 79%); }
 }
 
 
@@ -331,9 +331,9 @@
     margin: 30px;
     font-size: 2rem;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 3px;
     /* background-color: var(--Vinotinto); */
-    border: solid 3px var(--negro);
+    border: solid 1px var(--negro);
     text-decoration: none;
     background-attachment: fixed;
 }
@@ -465,17 +465,7 @@
     align-items: center;
 
 }
-.testimonios h3{
-    background-image: url(../img/fondo_gotico.jpg);
-    background-attachment: fixed;
-    padding: 30px;
-    width: 70%;
-    color: var(--gris_claro_metalico);
-    border: solid 3px var(--negro);
-    border-radius: 20px;
-    text-align: center;
-    font-size: 1.5rem;
-}
+
 .comentarios{
     display: flex;
     flex-direction: column;
@@ -525,7 +515,48 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    padding: 0;
 }
+
+.cotizar{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cotizar a{
+    text-decoration: none;
+    color: var(--gris_claro_metalico);
+    background-color: var(--Vinotinto);
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+        display: flex;
+    align-items: center;
+    flex-direction: row;
+    transition: 0.5s;
+}
+.cotizar a:hover{
+    scale: 1.04;
+    transition: 0.5s;
+    box-shadow: var(--Vinotinto) 0px 0px 20px 0px;
+}
+.triangulito{
+    width: 30px;
+    height: 30px;
+    background-color: var(--gris_claro_metalico);
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
 @media only screen and (min-width: 768px) {
     .testimonios{
         width: 100%;
@@ -733,6 +764,43 @@
     80% { transform: perspective(600px) rotateY(4deg) skewY(1deg); }
     100% { transform: perspective(600px) rotateY(0deg) skewY(0deg); }
 }
+
+
+
+.preguntas_frecuentes{
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 0 ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Vinotinto_claro);
+}
+.contenedor_preguntas_frecuentes{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contenedor_preguntas_frecuentes details{
+    background-color: var(--Vinotinto);
+    margin: 10px;
+    padding: 10px;
+    color: var(--gris_claro_metalico);
+    border: solid 1px var(--negro);
+    border-radius: 3px;
+    transition: 0.5s;
+
+}
+
+
+
+
+
+
+
 
 /* ---------------------------------Datos de cuentas y contactos----------------------- */
 
