@@ -3,6 +3,7 @@
     --Vinotinto :#4A1A1A ;
     --negro: #000000;
     --gris_claro_metalico: #8c8c8c  ;
+    --vinotinto-brillante: #db0b00;
 }
 
 
@@ -12,8 +13,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Helvetica", sans-serif;
 }
-
+.degradado-claro-oscuro {
+    margin-top: 2rem;
+    height: 75px;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--gris_claro_metalico) 0%, var(--Vinotinto_claro) 100%);
+}
+.degradado-oscuro-claro {
+    margin-top: 2rem;
+    height: 75px;
+    width: 100%;
+    background: linear-gradient(to bottom,  var(--Vinotinto_claro) 0%, var(--gris_claro_metalico) 100%);
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
 
 .unifrakturmaguntia-regular {
   font-family: "UnifrakturMaguntia", cursive;
@@ -26,7 +42,7 @@
     background-size: cover;
     width: 100%;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     display: flex;flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -158,15 +174,16 @@
     justify-content: space-evenly;
     padding: 1.5rem;
 }
-.contenedor_opcion_redes > a {
+.contenedor_opcion_redes > a > i {
     color: var(--gris_claro_metalico);
     text-decoration: none;
     font-size: 3rem;
     transition: all .5s ease;
 }
-.contenedor_opcion_redes > a:hover {
-    transform: scale(1.2);
+.contenedor_opcion_redes > a:hover > i {
+    transform: scale(1.1);
     filter: brightness(1.5);
+    box-shadow: #4A1A1A 0px 5px 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -185,28 +202,18 @@
 /*---------presentacion-------------*/
 
 .presentacion{
-    width: 100%;
     text-align: center;
-    font-size: 2em;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
+    width: 100%;
+    padding-top: 2rem;
 }
 .presentacion p {
-    max-width: 95%;
-    border-radius: 20px;
-    background-color: var(--gris_claro_metalico);
-    margin: 10px;
-    padding: 20px;
-    font-family: fantasy;
-
+    font-family: Helvetica;
+    font-size: 22px;
+    margin-bottom: 2.5rem;
 }
 .presentacion img{
     height: 40px;
     width: 100%;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -222,22 +229,21 @@
 
 .trabajos{
     background-color: var(--Vinotinto_claro);
-    padding: 1rem 0;
-    margin-top: 1rem;
 }
-.h2{
-    background: var(--Vinotinto_claro); 
+h2{
     font-family: "UnifrakturMaguntia", cursive;
     text-align: center;
-    max-width: 90%;
-    font-size: 2em;
-    padding: 10px;
-    color: var(--gris_claro_metalico);
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--Vinotinto_claro);
+    margin: 2rem 0;
+}
+.text-red {
+    color: var(--vinotinto-brillante);
 }
 
 .contenedor_mini_galeria{
     width: 100%;
-    margin-top: 80px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -251,9 +257,13 @@
 
 .contenedordelcontenedorfototatuaje{
     background-color: var(--gris_claro_metalico);
-   padding: 0;
-   border-radius: 3px;
-   margin: 5px 0;
+    padding: 0;
+    border-radius: 3px;
+    margin: 5px 0;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    transition: all .5s ease;
 }
 .fonditonegrito{
     background-color: var(--Vinotinto_claro)
@@ -261,7 +271,8 @@
 
 
 .contenedor_foto_tatuaje{
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     margin-bottom: 0px;
     margin-top: 0px;
     background-color: #4A1A1A;
@@ -269,13 +280,27 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 3px;
-    border: solid 1px var(--negro);
+    border: solid 1px #4A1A1A;
     overflow: hidden;
     /* Para asegurar que el efecto de clip-path se vea bien */
-    transition: 0.5s;
     background-color: var(--Vinotinto_claro);
+    cursor: pointer;
+    transition: all .5s ease;
 }
-
+.contenedor_foto_tatuaje > img {
+    transition: all .5s ease; 
+    filter: grayscale();
+}
+.contenedor_foto_tatuaje:hover {
+    z-index: 1;
+    transition: 0.5s;
+}
+.contenedor_foto_tatuaje:hover > img {
+    filter: contrast(1.2);
+}
+.contenedordelcontenedorfototatuaje:has(.contenedor_foto_tatuaje:hover) {
+    box-shadow: #4A1A1A -15px 25px 35px;
+}
 
   
 
@@ -295,7 +320,7 @@
 
 
 .contenedor_foto_tatuaje img{
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     border-radius: 5px;
     /* Si quieres animar el clip-path sobre la imagen directamente, agrega: */
@@ -303,18 +328,29 @@
 }
 
 
-.boton_ver_mas{
-    background-image: url(../img/fondo_gotico.jpg);
-    color: var(--gris_claro_metalico);
-    padding: 10px 30px;
-    margin: 30px;
-    font-size: 2rem;
+.goth_btn {
+    background-image: url(../img/goth_btn.png);
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    width: 300px;
+    height: 105px;
+    overflow: visible;
+    cursor: pointer;
     text-align: center;
-    border-radius: 3px;
-    /* background-color: var(--Vinotinto); */
-    border: solid 1px var(--negro);
+    color: white;
     text-decoration: none;
-    background-attachment: fixed;
+    transition: all .5s ease;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goth_btn > span {
+    margin-top: 1rem;
+}
+.goth_btn:hover {
+    background-image: url(../img/goth_btn_hover.png);
 }
 
 
@@ -325,15 +361,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 2.5rem;
     }
-    .h2{
-        width: 100%;
-    }
-
     .contenedordelcontenedorfototatuaje{
-     max-width: 30%;
+        max-width: 30%;
         width: 30%;
+        height: 375px;
         margin-bottom: 30px;
+        transition: box-shadow 0.5s;
     }
 
     .linea_decrativa2{
@@ -342,10 +377,19 @@
     .contenedor_mini_galeria{
         width: 70%;
     }
-    .contenedor_foto_tatuaje:hover{
-    scale: 1.11;
-    z-index: 1;
-    transition: 0.5s;
+    .contenedor_foto_tatuaje {
+        height: 375px;
+    }
+    .contenedor_foto_tatuaje:hover {
+        scale: 1.05;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    .contenedor_foto_tatuaje:hover > img {
+        filter: contrast(1.2);
+    }
+    .contenedordelcontenedorfototatuaje:has(.contenedor_foto_tatuaje:hover) {
+        box-shadow: #4A1A1A -15px 25px 35px;
     }
 }    
 
@@ -361,10 +405,6 @@
 
 }
 
-.contenedor_artista h2{
-    font-family: "UnifrakturMaguntia", cursive;
-    font-size: 2rem;
-}
 .img_artista{
     display: flex;
     flex-direction: column;
