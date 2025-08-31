@@ -1,6 +1,7 @@
 if(document.getElementById("boto_de_opciones") && document.getElementById("barra_opciones")){
     const boto_de_opciones = document.getElementById("boto_de_opciones");
     const barra_opciones = document.getElementById("barra_opciones");
+    const cerrar_barra = document.getElementById("cerrar_barra"); // add this
 
     function mostrarBarra() {
         gsap.to(barra_opciones, {
@@ -26,11 +27,8 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
         }
     });
 
-    // Cerrar con botón X
-    if(document.getElementById("boton_X_opciones")){
-        document.getElementById("boton_X_opciones").addEventListener('click', function(){
-            ocultarBarra();
-        });
+    if (cerrar_barra) {
+        cerrar_barra.addEventListener('click', ocultarBarra);
     }
 
     // Inicialmente oculta

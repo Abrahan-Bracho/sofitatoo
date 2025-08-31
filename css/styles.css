@@ -25,7 +25,8 @@
     background: url(../img/fondo_gotico.jpg) no-repeat center fixed; 
     background-size: cover;
     width: 100%;
-    height: 50vh;
+    height: auto;
+    padding: 2rem 1rem;
     display: flex;flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -52,15 +53,14 @@
 }
 .contenedor_boton_opciones{
     width: 100%;
-    height: 39vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .boto_de_opciones{
     background-color: var(--gris_claro_metalico);
-    height: 15vw;
-    width: 15vw;
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
     text-align: center;
     display: grid;
@@ -69,13 +69,16 @@
     align-content: space-evenly;
     border: solid #000000;
     transition: 0.5S;
+    cursor: pointer;
+}
+.boto_de_opciones > i {
+    font-size: 2rem;
 }
 .boto_de_opciones:hover{
-    height: 16vw;
-    width: 16vw;
     background-color: #cac8c8;
-    box-shadow: 0px 0px 20px 0px var(--negro);
+    box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.5);
     transition: 0.5S;
+    transform: scale(1.05);
 }
 .linea_boton_opciones{
     width: 50%;
@@ -86,17 +89,6 @@
     border-style: 5px;
 }
 @media only screen and (min-width: 768px) {
-    .header_continer {
-        height: 60vh;
-    }
-    .boto_de_opciones {
-    width: 13vh;
-    height: 13vh;
-    }
-    .boto_de_opciones:hover {
-    width: 14vh;
-    height: 14vh;
-    }
     .logo_img{
         width: 50%;
     }
@@ -108,7 +100,7 @@
     background: #4A1A1A;
     background: linear-gradient(179deg,rgba(74, 26, 26, 1) 0%, rgba(73, 26, 26, 1) 39%, rgba(0, 0, 0, 1) 100%);
     border: solid var(--negro);
-    height: 90%;
+    height: auto;
     width: 90%;
     position: fixed;
     top: 5%;
@@ -120,26 +112,18 @@
     border-radius: 20px;
     box-shadow: 0 10px 20px 0 var(--Vinotinto_claro);
     z-index: 10;
+    padding: 1rem;
 }
-
-.boton_X_opciones{
-    max-width: 100%;
-
+.barra_opciones > i {
+    align-self: end;
+    color: var(--gris_claro_metalico);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 1s ease;
 }
-.boton_X_opciones img{
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    position: absolute;
-    right: 5%;
-    top: 2%;
-    padding-bottom: 3px;
-    transition: 0.5s;
-}
-.boton_X_opciones img:hover{
-    width: 35px;
-    height: 35px;
-    transition: 0.5s;
+.barra_opciones > i:hover {
+    transform: rotateZ(180deg);
+    filter: brightness(1.5);
 }
 .logo_opciones{
     max-width: 100px;
@@ -150,44 +134,39 @@
 .opcion{
     text-align: end;
     color: var(--gris_claro_metalico);
-    padding: 0px;
-    margin: 0px;
-    font-size: 7vh;
-    width: 90%;
-    height: 100%;
+    padding: 1rem;
+    font-size: 22px;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
-    font-family: "UnifrakturMaguntia", cursive;
+    font-family: "Helvetica", sans-serif;
     text-decoration: none;
-    transition: 0.5s;
+    transition: all .5s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.5s;
 }
 .opcion:hover{
-    text-shadow: 10px 10px 10px var(--negro);
+    text-shadow: -4px 4px 2px var(--negro);
     background: linear-gradient(251deg,rgba(0, 0, 0, 0) 0%, rgba(110, 38, 38, 0.46) 50%, rgba(110, 38, 38, 0) 100%);
-    transition: 0.5s;
 }
 .contenedor_opcion_redes{
-    border-top: 3px solid var(--negro);
-    width: 90%;
+    border-top: 1px solid var(--gris_claro_metalico);
+    width: 80%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-.opcion_redes{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    
+    padding: 1.5rem;
 }
-.opcion_redes img{
-    width: 7vh;
-    height: 7vh;
-    margin: 10px;
+.contenedor_opcion_redes > a {
+    color: var(--gris_claro_metalico);
+    text-decoration: none;
+    font-size: 3rem;
+    transition: all .5s ease;
+}
+.contenedor_opcion_redes > a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
 }
 
 @media only screen and (min-width: 768px) {
