@@ -5,7 +5,7 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
 
     function mostrarBarra() {
         gsap.to(barra_opciones, {
-            right: "5%",
+            right: isMobileScreen() ? '0' : '5%',
             duration: 0.5
         });
         
@@ -39,6 +39,10 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
 
     // Inicialmente oculta
     barra_opciones.dataset.visible = "false";
+}
+
+function isMobileScreen() {
+    return window.innerWidth <= 768;
 }
 
 // Animación futurista con triángulos y clip-path para imágenes de la galería y mini galería
