@@ -19,6 +19,7 @@
 
 <body class="body">
 
+
     <!-- aqui esta la cabeza de pa paguina y el menu de opciones -->
 
 
@@ -67,37 +68,49 @@
 
 
 
-    
-    <div class="contenedor_artista">
-        <h2>Alejandra Rodriguez</h2>
-        <div class="img_artista">
-            
-            <img class="foto_ale" src="img/WhatsApp Image 2025-08-04 at 18.49.34_a1c92fe2.jpg" alt="">
-            <img class="esquinita_gotica1" src="img/esquinita_gotica.png" alt="esquina">
-            <img class="esquinita_gotica2" src="img/esquinita_gotica (2).png" alt="esquina">
-        </div>
-        <div class="informacion_artista">
-        <h3> sobre mi</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis eligendi placeat provident autem illo ipsam corrupti ipsum, temporibus officia repellendus similique ab? Nostrum, praesentium optio vitae amet nam repellat!</p>
-        </div>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis eligendi placeat provident autem illo ipsam corrupti ipsum, temporibus officia repellendus similique ab? Nostrum, praesentium optio vitae amet nam repellat!</p>
-        </div>
+
+    <div  class="formulario_de_contacto">
+
+        <form id="formulario_de_contacto" action="">
+            <label for="name">nombre</label>
+            <input name="nombre" id="nombre" type="text">
+            <br>
+
+            <label for="lastname">Apellido</label>
+            <input name="apellido" id="apellido" type="text">
+            <br>
+
+            <label for="medida">Elegir una medida</label>
+            <select name="medidas" id="medidas_del_tatuaje">
+                <option value="0"> 0</option>
+                <option value="5">5 Centimetros</option>
+                <option value="10">10 Centimetros</option>
+                <option value="15">15 Centimetros</option>
+                <option value="20">20 Centimetros</option>
+
+            </select>
+            <br>
+            <label for="descripsion"> Descripcion</label>
+            <textarea name="descripsion" id="descripsion" type="text"> </textarea>
+            <br>
+            <button id="boton_formulario" type="submid" >contactar</button>
 
 
-
+        </form>
 
     </div>
 
 
 
 
+    
+<!-- ----------------------------footer---------------------- -->
 
 
     <div class="footer">
         <div class="alejandra_footer">
             <img src="img/sofiatattoo.-Photoroom.png" alt="">
-            <p>Alejandra Sofia Rodirgues</p>
+            <p>Alejandra Sofia Rodriguez</p>
         </div>
 
 
@@ -119,6 +132,10 @@
         
     </div>
 
-<script src="js/index.js" ></script>
-<script src="js/GSAP.js"></script>
-</html>   
+
+
+
+
+
+    <script src="js/index.js" ></script>
+</html>  
