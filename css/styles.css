@@ -1,13 +1,13 @@
-:root{
-    --Vinotinto_claro : #2D2D2D;
-    --Vinotinto :#4A1A1A ;
+:root {
+    --Vinotinto_claro: #2D2D2D;
+    --Vinotinto: #4A1A1A;
     --negro: #000000;
-    --gris_claro_metalico: #8c8c8c  ;
+    --gris_claro_metalico: #8c8c8c;
     --vinotinto-brillante: #db0b00;
 }
 
 
-.body{
+.body {
     /* background-color: var(--gris_claro_metalico) ; */
     background: var(--gris_claro_metalico);
     display: flex;
@@ -15,49 +15,54 @@
     align-items: center;
     font-family: "Helvetica", sans-serif;
 }
+
 .degradado-claro-oscuro {
     margin-top: 2rem;
     height: 75px;
     width: 100%;
     background: linear-gradient(to bottom, var(--gris_claro_metalico) 0%, var(--Vinotinto_claro) 100%);
 }
+
 .degradado-oscuro-claro {
     margin-top: 2rem;
     height: 75px;
     width: 100%;
-    background: linear-gradient(to bottom,  var(--Vinotinto_claro) 0%, var(--gris_claro_metalico) 100%);
+    background: linear-gradient(to bottom, var(--Vinotinto_claro) 0%, var(--gris_claro_metalico) 100%);
 }
+
 .mb-2 {
     margin-bottom: 2rem;
 }
 
 .unifrakturmaguntia-regular {
-  font-family: "UnifrakturMaguntia", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.header_continer{
+.header_continer {
     background: url(../img/fondo_gotico.jpg) no-repeat center fixed;
     background-size: cover;
     width: 100%;
     height: auto;
     padding: 2rem 0;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     padding-top: 5vh;
     border-bottom: solid var(--negro) 3PX;
 }
 
-.logo{
+.logo {
     width: 100%;
     height: 39vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.logo_img{
+
+.logo_img {
     max-width: 100%;
     max-height: 100%;
     background-image: url("../img/sofiatatoo_letras.png");
@@ -67,13 +72,15 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-.contenedor_boton_opciones{
+
+.contenedor_boton_opciones {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.boto_de_opciones{
+
+.boto_de_opciones {
     background-color: var(--gris_claro_metalico);
     height: 75px;
     width: 75px;
@@ -87,16 +94,19 @@
     transition: 0.5S;
     cursor: pointer;
 }
-.boto_de_opciones > i {
+
+.boto_de_opciones>i {
     font-size: 2rem;
 }
-.boto_de_opciones:hover{
+
+.boto_de_opciones:hover {
     background-color: #cac8c8;
     box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.5);
     transition: 0.5S;
     transform: scale(1.05);
 }
-.linea_boton_opciones{
+
+.linea_boton_opciones {
     width: 50%;
     height: 5px;
     background-color: var(--negro);
@@ -104,17 +114,18 @@
     padding: 0;
     border-style: 5px;
 }
+
 @media only screen and (min-width: 768px) {
-    .logo_img{
+    .logo_img {
         width: 50%;
     }
 }
 
 /*   barra de opciones--------------------------*/
 
-.barra_opciones{
+.barra_opciones {
     background: #4A1A1A;
-    background: linear-gradient(179deg,rgba(74, 26, 26, 1) 0%, rgba(73, 26, 26, 1) 39%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(179deg, rgba(74, 26, 26, 1) 0%, rgba(73, 26, 26, 1) 39%, rgba(0, 0, 0, 1) 100%);
     border: solid var(--negro);
     height: auto;
     width: 90%;
@@ -130,24 +141,28 @@
     z-index: 10;
     padding: 1rem;
 }
-.barra_opciones > i {
+
+.barra_opciones>i {
     align-self: end;
     color: var(--gris_claro_metalico);
     font-size: 2rem;
     cursor: pointer;
     transition: all 1s ease;
 }
-.barra_opciones > i:hover {
+
+.barra_opciones>i:hover {
     transform: rotateZ(180deg);
     filter: brightness(1.5);
 }
-.logo_opciones{
+
+.logo_opciones {
     max-width: 100px;
     max-height: 100px;
     margin: 1em 1em 2em 1em;
     text-align: center;
 }
-.opcion{
+
+.opcion {
     text-align: end;
     color: var(--gris_claro_metalico);
     padding: 1rem;
@@ -162,12 +177,14 @@
     flex-direction: column;
     justify-content: center;
 }
-.opcion:hover{
+
+.opcion:hover {
     text-shadow: -4px 4px 2px var(--negro);
-    background: linear-gradient(251deg,rgba(0, 0, 0, 0) 0%, rgba(110, 38, 38, 0.46) 50%, rgba(110, 38, 38, 0) 100%);
+    background: linear-gradient(251deg, rgba(0, 0, 0, 0) 0%, rgba(110, 38, 38, 0.46) 50%, rgba(110, 38, 38, 0) 100%);
 }
-.opcionredes{
-        text-align: end;
+
+.opcionredes {
+    text-align: end;
     color: var(--gris_claro_metalico);
     padding: 1rem;
     font-size: 22px;
@@ -181,11 +198,13 @@
     flex-direction: column;
     justify-content: center;
 }
-.opcion:hover{
+
+.opcion:hover {
     text-shadow: -4px 4px 2px var(--negro);
-    background: linear-gradient(251deg,rgba(0, 0, 0, 0) 0%, rgba(110, 38, 38, 0.46) 50%, rgba(110, 38, 38, 0) 100%);
+    background: linear-gradient(251deg, rgba(0, 0, 0, 0) 0%, rgba(110, 38, 38, 0.46) 50%, rgba(110, 38, 38, 0) 100%);
 }
-.contenedor_opcion_redes{
+
+.contenedor_opcion_redes {
     border-top: 1px solid var(--gris_claro_metalico);
     width: 80%;
     display: flex;
@@ -193,13 +212,15 @@
     justify-content: space-evenly;
     padding: 1.5rem;
 }
-.contenedor_opcion_redes > a > i {
+
+.contenedor_opcion_redes>a>i {
     color: var(--gris_claro_metalico);
     text-decoration: none;
     font-size: 3rem;
     transition: all .5s ease;
 }
-.contenedor_opcion_redes > a:hover > i {
+
+.contenedor_opcion_redes>a:hover>i {
     transform: scale(1.1);
     filter: brightness(1.5);
     box-shadow: #4A1A1A 0px 5px 15px;
@@ -207,9 +228,9 @@
 
 @media only screen and (min-width: 768px) {
 
-.barra_opciones{
-    width: 30%;
-}
+    .barra_opciones {
+        width: 30%;
+    }
 
 
 }
@@ -220,25 +241,27 @@
 
 /*---------presentacion-------------*/
 
-.presentacion{
+.presentacion {
     text-align: center;
     width: 100%;
     padding-top: 2rem;
 }
+
 .presentacion p {
     font-family: Helvetica;
     font-size: 22px;
     margin-bottom: 2.5rem;
 }
-.presentacion img{
+
+.presentacion img {
     height: 40px;
     width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-    .presentacion img{
-    height: 40px;
-    width: 20%;
+    .presentacion img {
+        height: 40px;
+        width: 20%;
 
     }
 }
@@ -246,10 +269,12 @@
 
 /* --------------- apratir de aqui es la mini galera de tatuajes--------- */
 
-.trabajos{
+.trabajos {
     background-color: var(--Vinotinto_claro);
+    width: 100%;
 }
-h2{
+
+h2 {
     font-family: "UnifrakturMaguntia", cursive;
     text-align: center;
     font-size: 2.5em;
@@ -257,24 +282,26 @@ h2{
     color: var(--Vinotinto_claro);
     margin: 2rem 0;
 }
+
 .text-red {
-    color: var(--vinotinto-brillante);
+    color: var(--gris_claro_metalico);
 }
 
-.contenedor_mini_galeria{
+.contenedor_mini_galeria {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.linea_decrativa2{
+
+.linea_decrativa2 {
     width: 100%;
     height: 30px;
     /* filter: invert(1); */
 }
 
-.contenedordelcontenedorfototatuaje{
+.contenedordelcontenedorfototatuaje {
     background-color: var(--gris_claro_metalico);
     padding: 0;
     border-radius: 3px;
@@ -284,12 +311,13 @@ h2{
     width: 90%;
     transition: all .5s ease;
 }
-.fonditonegrito{
+
+.fonditonegrito {
     background-color: var(--Vinotinto_claro)
 }
 
 
-.contenedor_foto_tatuaje{
+.contenedor_foto_tatuaje {
     width: 100%;
     height: auto;
     margin-bottom: 0px;
@@ -306,16 +334,20 @@ h2{
     cursor: pointer;
     transition: all .5s ease;
 }
-.contenedor_foto_tatuaje > img {
-    transition: all .5s ease; 
+
+.contenedor_foto_tatuaje>img {
+    transition: all .5s ease;
 }
+
 .contenedor_foto_tatuaje:hover {
     z-index: 1;
     transition: 0.5s;
 }
-.contenedor_foto_tatuaje:hover > img {
+
+.contenedor_foto_tatuaje:hover>img {
     filter: contrast(1.2);
 }
+
 .contenedordelcontenedorfototatuaje:has(.contenedor_foto_tatuaje:hover) {
     box-shadow: #4A1A1A -15px 25px 35px;
 }
@@ -323,26 +355,69 @@ h2{
 
 
 @keyframes cargarTriangulos {
-  10% { opacity: 0%; clip-path: polygon(25% 0%, 24% 0, 26% 0, 0 24%, 0 23%, 0 0); }
-  20% { opacity: 0%;clip-path: polygon(30% 0, 68% 0, 41% 17%, 23% 14%, 0 22%, 0 0); }
-  30% { opacity: 0%; clip-path: polygon(30% 0, 100% 0, 84% 24%, 48% 8%, 0 22%, 0 0); }
-  40% { opacity: 10%; clip-path: polygon(30% 0, 100% 0, 100% 34%, 48% 14%, 0 22%, 0 0); }
-  50% { opacity: 20%; clip-path: polygon(0 0, 100% 0, 100% 34%, 48% 25%, 39% 58%, 0 35%); }
-  60% { opacity: 40%; clip-path: polygon(0 0, 100% 0, 100% 59%, 48% 25%, 39% 58%, 0 35%); }
-  70% { opacity: 50%; clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 35%); }
-  80% { opacity: 60%; clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 79%); }
-  90% { opacity: 80%; clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 36% 86%, 0 79%); }
-  95% { opacity: 90%; clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 0 100%, 0 79%); }
-  100% { opacity: 100%; clip-path: polygon(0 0, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 79%); }
+    10% {
+        opacity: 0%;
+        clip-path: polygon(25% 0%, 24% 0, 26% 0, 0 24%, 0 23%, 0 0);
+    }
+
+    20% {
+        opacity: 0%;
+        clip-path: polygon(30% 0, 68% 0, 41% 17%, 23% 14%, 0 22%, 0 0);
+    }
+
+    30% {
+        opacity: 0%;
+        clip-path: polygon(30% 0, 100% 0, 84% 24%, 48% 8%, 0 22%, 0 0);
+    }
+
+    40% {
+        opacity: 10%;
+        clip-path: polygon(30% 0, 100% 0, 100% 34%, 48% 14%, 0 22%, 0 0);
+    }
+
+    50% {
+        opacity: 20%;
+        clip-path: polygon(0 0, 100% 0, 100% 34%, 48% 25%, 39% 58%, 0 35%);
+    }
+
+    60% {
+        opacity: 40%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 48% 25%, 39% 58%, 0 35%);
+    }
+
+    70% {
+        opacity: 50%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 35%);
+    }
+
+    80% {
+        opacity: 60%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 38% 83%, 39% 58%, 0 79%);
+    }
+
+    90% {
+        opacity: 80%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 36% 86%, 0 79%);
+    }
+
+    95% {
+        opacity: 90%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 82% 91%, 0 100%, 0 79%);
+    }
+
+    100% {
+        opacity: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 79%);
+    }
 }
 
 
-.contenedor_foto_tatuaje img{
+.contenedor_foto_tatuaje img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     /* Si quieres animar el clip-path sobre la imagen directamente, agrega: */
-     transition: clip-path 0.5s cubic-bezier(0.4,0,0.2,1);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -364,9 +439,11 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.goth_btn > span {
+
+.goth_btn>span {
     margin-top: 1rem;
 }
+
 .goth_btn:hover {
     background-image: url(../img/goth_btn_hover.png);
 }
@@ -375,13 +452,14 @@ h2{
 
 
 @media only screen and (min-width: 768px) {
-    .trabajos{
+    .trabajos {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 2.5rem;
     }
-    .contenedordelcontenedorfototatuaje{
+
+    .contenedordelcontenedorfototatuaje {
         max-width: 30%;
         width: 30%;
         height: 375px;
@@ -389,54 +467,66 @@ h2{
         transition: box-shadow 0.5s;
     }
 
-    .linea_decrativa2{
+    .linea_decrativa2 {
         display: none;
     }
-    .contenedor_mini_galeria{
+
+    .contenedor_mini_galeria {
         width: 70%;
     }
+
     .contenedor_foto_tatuaje {
         height: 375px;
     }
+
     .contenedor_foto_tatuaje:hover {
         scale: 1.05;
         z-index: 1;
         transition: 0.5s;
     }
-    .contenedor_foto_tatuaje:hover > img {
+
+    .contenedor_foto_tatuaje:hover>img {
         filter: contrast(1.2);
     }
+
     .contenedordelcontenedorfototatuaje:has(.contenedor_foto_tatuaje:hover) {
         box-shadow: #4A1A1A -15px 25px 35px;
     }
-}    
+}
 
 /* Efecto de agrandar imagen tipo lightbox simple */
- .lightbox {
+.lightbox {
     position: fixed !important;
     top: 0% !important;
     left: 0% !important;
     z-index: 20 !important;
-    width: 100vw ;
-    height: 100% ;
-    
+    width: 100vw;
+    height: 100%;
+
     background: #2222228b;
     cursor: pointer;
     display: none;
     cursor: auto;
 }
+
 @keyframes agrandar-img {
-    from { transform: translate(50%, 50%) scale(0.7);}
-    to   { transform: translate(50%, 50%) scale(1.1);}
+    from {
+        transform: translate(50%, 50%) scale(0.7);
+    }
+
+    to {
+        transform: translate(50%, 50%) scale(1.1);
+    }
 }
-.lightbox img{
+
+.lightbox img {
     height: 80vh;
     box-shadow: 0 0 40px 10px #000a;
     border-radius: 4px;
     border: solid var(--Vinotinto) 2px;
 }
 
-.lightbox.active{
+.lightbox.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -444,10 +534,10 @@ h2{
 
 .no-scroll {
     overflow: hidden !important;
-} 
+}
 
-.lightbox-close{
-   z-index: 30;
+.lightbox-close {
+    z-index: 30;
     position: absolute;
     bottom: 10px;
     right: 20%;
@@ -463,12 +553,14 @@ h2{
     cursor: pointer;
     transition: 0.5s;
 }
-.lightbox-close:hover{
+
+.lightbox-close:hover {
     scale: 1.01;
     box-shadow: 0 0 50px 5px var(--negro);
     transition: 0.5s;
     color: var(--Vinotinto_claro);
 }
+
 .overflow-hidden {
     overflow: hidden !important;
 }
@@ -479,7 +571,7 @@ h2{
 /*----------precentacion artista ------------*/
 
 
-.contenedor_artista{
+.contenedor_artista {
     margin: 20px 20px 40px 20px;
     display: flex;
     flex-direction: column;
@@ -487,47 +579,53 @@ h2{
 
 }
 
-.img_artista{
+.img_artista {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
     position: relative;
 }
-.foto_ale{
+
+.foto_ale {
     width: 100%;
     border: solid;
     border-radius: 20px;
     clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
     z-index: 2;
 }
-.esquinita_gotica1{
+
+.esquinita_gotica1 {
     width: 25%;
     position: absolute;
     z-index: 3;
     top: 0;
     left: 0;
 }
-.esquinita_gotica2{
+
+.esquinita_gotica2 {
     width: 25%;
     position: absolute;
     z-index: 3;
     bottom: 0;
     right: 0;
 }
-.informacion_artista{
-   text-align: center;
+
+.informacion_artista {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.informacion_artista h3{
+
+.informacion_artista h3 {
     font-size: 2rem;
     font-family: "UnifrakturMaguntia", cursive;
     margin: 20px 0 10px 0;
     border-bottom: solid 3px var(--negro);
 }
-.informacion_artista P{
+
+.informacion_artista P {
     text-align: center;
     background-color: var(--Vinotinto_claro);
     WIDTH: 90%;
@@ -538,10 +636,11 @@ h2{
 }
 
 @media only screen and (min-width: 768px) {
-    .img_artista{
+    .img_artista {
         width: 50%;
     }
-    .informacion_artista P{
+
+    .informacion_artista P {
         width: 50%;
     }
 
@@ -552,7 +651,7 @@ h2{
 
 
 
-.mirar_mas{
+.mirar_mas {
     font-family: "UnifrakturMaguntia", cursive;
 }
 
@@ -560,14 +659,14 @@ h2{
 
 /* --------------------------------------opiniones de crientes ------------------------ */
 
-.testimonios{
+.testimonios {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.comentarios{
+.comentarios {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -575,7 +674,8 @@ h2{
     align-items: center;
 
 }
-.comentario p{
+
+.comentario p {
     text-align: center;
     word-wrap: break-word;
     color: var(--gris_claro_metalico);
@@ -584,14 +684,15 @@ h2{
     padding: 0 5px;
     background-color: #2d2d2d38;
 }
-.comentario h4{
-    font-family:  "UnifrakturMaguntia", cursive;
+
+.comentario h4 {
+    font-family: "UnifrakturMaguntia", cursive;
     font-size: 1rem;
     color: var(--gris_claro_metalico);
     padding: 5px 5px;
 }
 
-.comentario{
+.comentario {
     width: 90%;
     height: 100%;
     background-color: var(--Vinotinto_claro);
@@ -609,7 +710,7 @@ h2{
 
 
 
-.comentario img{
+.comentario img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -622,8 +723,8 @@ h2{
 
 
 
-.cotizar{
-    margin: 100px  0;
+.cotizar {
+    margin: 100px 0;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -632,8 +733,8 @@ h2{
     justify-content: center;
 }
 
-.cotizar{
-    margin: 100px  0;
+.cotizar {
+    margin: 100px 0;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -642,14 +743,14 @@ h2{
     justify-content: center;
 }
 
-.boton_cotizar{
+.boton_cotizar {
     text-decoration: none;
     color: rgb(255 255 255 / 65%);
     background-image: none;
     background: linear-gradient(90deg, rgba(74, 26, 26, 1) 0%, rgb(117, 47, 47) 50%, rgba(74, 26, 26, 1) 100%);
     padding: 10px 20px;
     height: 50px;
-    width: 250px;
+    width: 240px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -658,22 +759,47 @@ h2{
     justify-content: center;
     font-size: 1.5rem;
     font-family: "Helvetica";
-    box-shadow: #fffccf 0 0px 70px 20px;
+    box-shadow: #fffccf49 0 0px 70px 20px;
+    transition: 0.5s;
+
+}
+.boton_cotizar:hover {
+    scale: 1.04;
+    transition: 0.5s;
+    box-shadow: #fffeee 0px 0px 90px 30px;
+    background-color: #a55757;
+     background: linear-gradient(90deg, rgb(110, 50, 50) 0%, rgb(160, 79, 79) 50%, rgb(110, 50, 50) 100%);
+     transition: 0.5s;
 }
 
-.boton_cotizar img{
+.boton_cotizar p {
+    z-index: 5;
+}
+
+.img-uno {
     position: absolute;
     width: 370px;
     height: 200px;
     top: -66px;
-    left: -40px;
+    left: -45px;
 }
-.boton_cotizar:hover{
-    scale: 1.04;
-    transition: 0.5s;
-    box-shadow: #fffeee 0px 0px 90px 30px;
+
+.img-dos {
+    position: absolute;
+    height: 70px;
+    width: 210px;
 }
-.triangulito{
+
+
+
+.borde-interno-del-boton {
+    position: absolute;
+    height: 50px;
+    width: 220px;
+    border: solid 1px var(--negro);
+}
+
+.triangulito {
     width: 30px;
     height: 30px;
     background-color: var(--gris_claro_metalico);
@@ -689,22 +815,25 @@ h2{
 
 
 @media only screen and (min-width: 768px) {
-    .testimonios{
+    .testimonios {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .contenedor_testimonios{
+
+    .contenedor_testimonios {
         width: 100%;
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
         align-items: center;
     }
-    .comentarios{
+
+    .comentarios {
         justify-content: center;
         width: 90%;
     }
-    .comentario{
+
+    .comentario {
         width: 70%;
         margin: 20px 0px;
         justify-content: center;
@@ -715,7 +844,7 @@ h2{
 /* ----------------------estilos------------------------------ */
 
 
-.estilos{
+.estilos {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -726,19 +855,20 @@ h2{
 
 }
 
-.estilos h3{
-    font-family:  "UnifrakturMaguntia", cursive;
+.estilos h3 {
+    font-family: "UnifrakturMaguntia", cursive;
     color: var(--gris_claro_metalico);
     font-size: 3rem;
     text-shadow: 0px 10px 10px var(--negro);
 }
-.estilos p{
+
+.estilos p {
     color: var(--gris_claro_metalico);
     font-size: 1.5rem;
     text-align: center;
 }
 
-.contenedor_estilos{
+.contenedor_estilos {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -746,7 +876,8 @@ h2{
     flex-wrap: wrap;
 
 }
-.estilo{
+
+.estilo {
     width: 45%;
     height: 30vh;
     /* border: solid 1px var(--negro); */
@@ -755,14 +886,15 @@ h2{
     margin: 10px 0px;
     text-align: center;
     background: #808080;
-    background: linear-gradient(179deg,rgba(128, 128, 128, 1) 0%, rgba(26, 25, 25, 1) 100%);
+    background: linear-gradient(179deg, rgba(128, 128, 128, 1) 0%, rgba(26, 25, 25, 1) 100%);
     color: var(--gris_claro_metalico);
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.estilo img{
+
+.estilo img {
     width: 100%;
     border-radius: 3px;
 
@@ -770,29 +902,33 @@ h2{
     margin: 5PX;
 
 }
-.estilo h4{
-    font-family:  "UnifrakturMaguntia", cursive;
+
+.estilo h4 {
+    font-family: "UnifrakturMaguntia", cursive;
     font-size: 2rem;
     border-bottom: solid 3px var(--gris_claro_metalico);
     width: 100%;
 }
-.estilo p{
+
+.estilo p {
     text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
 
-    .estilo{
-    width: 15%;
-    height: 30vh;
-    margin: 0;
-    margin-bottom: 30px;
+    .estilo {
+        width: 15%;
+        height: 30vh;
+        margin: 0;
+        margin-bottom: 30px;
     }
-    .estilos{
+
+    .estilos {
         width: 100%;
 
     }
-    .contenedor_estilos{
+
+    .contenedor_estilos {
         width: 80%;
     }
 }
@@ -807,7 +943,7 @@ h2{
 
 /* --------------------------promociones---------------------- */
 
-.Contenedor_promociones{
+.Contenedor_promociones {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -817,16 +953,18 @@ h2{
     color: var(--gris_claro_metalico);
     text-align: center;
 }
-.Contenedor_promociones h3{
+
+.Contenedor_promociones h3 {
     font-family: "UnifrakturMaguntia", cursive;
     font-size: 3rem;
     color: var(--gris_claro_metalico1);
 }
-.Contenedor_promociones p{
+
+.Contenedor_promociones p {
     font-size: 1.5rem;
 }
 
-.promociones{
+.promociones {
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -834,7 +972,7 @@ h2{
     justify-content: space-evenly;
 }
 
-.promocion{
+.promocion {
     width: calc(50% - 50px);
     margin: 10px;
     border: solid 2px #381717;
@@ -845,29 +983,32 @@ h2{
     flex-direction: column;
     align-items: center;
     background: #8f4d4d;
-    background: linear-gradient(179deg,rgba(143, 77, 77, 1) 0%, rgba(74, 26, 26, 1) 100%);
+    background: linear-gradient(179deg, rgba(143, 77, 77, 1) 0%, rgba(74, 26, 26, 1) 100%);
     clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
 
 }
-.promocion:hover{
-    animation: bandera-wave 2.5s cubic-bezier(0.4,0,0.2,1) both;
+
+.promocion:hover {
+    animation: bandera-wave 2.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 
 }
-.promocion h4{
+
+.promocion h4 {
     text-align: center;
     font-family: "UnifrakturMaguntia", cursive;
     font-size: 1.9rem;
     margin: 10px 0;
     color: var(--gris_claro_metalico);
 }
-.promocion p{
+
+.promocion p {
     text-align: center;
     color: var(--gris_claro_metalico);
     font-size: 1.2rem;
     margin: 10px 0;
 }
 
-.promocion img{
+.promocion img {
     max-width: 100%;
     height: 50%;
     border-radius: 20px;
@@ -876,7 +1017,7 @@ h2{
 
 @media only screen and (min-width: 768px) {
 
-    .promocion{
+    .promocion {
         width: 15%;
         margin-bottom: 30px;
 
@@ -888,34 +1029,53 @@ h2{
 
 
 @keyframes bandera-wave {
-    0% { transform: perspective(600px) rotateY(0deg) skewY(0deg); }
-    20% { transform: perspective(600px) rotateY(-6deg) skewY(-2deg); }
-    40% { transform: perspective(600px) rotateY(6deg) skewY(2deg); }
-    60% { transform: perspective(600px) rotateY(-4deg) skewY(-1deg); }
-    80% { transform: perspective(600px) rotateY(4deg) skewY(1deg); }
-    100% { transform: perspective(600px) rotateY(0deg) skewY(0deg); }
+    0% {
+        transform: perspective(600px) rotateY(0deg) skewY(0deg);
+    }
+
+    20% {
+        transform: perspective(600px) rotateY(-6deg) skewY(-2deg);
+    }
+
+    40% {
+        transform: perspective(600px) rotateY(6deg) skewY(2deg);
+    }
+
+    60% {
+        transform: perspective(600px) rotateY(-4deg) skewY(-1deg);
+    }
+
+    80% {
+        transform: perspective(600px) rotateY(4deg) skewY(1deg);
+    }
+
+    100% {
+        transform: perspective(600px) rotateY(0deg) skewY(0deg);
+    }
 }
 
 
 
-.preguntas_frecuentes{
+.preguntas_frecuentes {
     max-width: 100%;
     width: 100%;
     margin: 20px 0;
-    padding: 10px 0 ;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--Vinotinto_claro);
 }
-.contenedor_preguntas_frecuentes{
+
+.contenedor_preguntas_frecuentes {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.contenedor_preguntas_frecuentes details{
+
+.contenedor_preguntas_frecuentes details {
     background-color: var(--Vinotinto);
     margin: 10px;
     padding: 10px;
@@ -936,10 +1096,11 @@ h2{
 /* ---------------------------------Datos de cuentas y contactos----------------------- */
 
 
-.contactos_contenedor{
+.contactos_contenedor {
     width: 100%;
 }
-.cuntactos{
+
+.cuntactos {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -947,7 +1108,8 @@ h2{
     align-items: center;
 
 }
-.telefono{
+
+.telefono {
     background-color: var(--Vinotinto_claro);
     padding: 10px;
     margin: 20px;
@@ -958,7 +1120,7 @@ h2{
     font-size: 1.5rem;
 }
 
-.redeses_contactos{
+.redeses_contactos {
     background-color: var(--Vinotinto_claro);
     padding: 20px;
     width: 80%;
@@ -970,7 +1132,7 @@ h2{
     border-radius: 20px;
 }
 
-.redeses_contactos   a{
+.redeses_contactos a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -983,18 +1145,18 @@ h2{
     width: 70%;
 }
 
-.redeses_contactos a p{
+.redeses_contactos a p {
     margin: 5px;
     color: var(--gris_claro_metalico);
     text-decoration: none;
 }
 
-.redeses_contactos a img{
+.redeses_contactos a img {
     width: 40px;
 }
 
 
-.pagos{
+.pagos {
     background-color: var(--Vinotinto);
     margin: 20px;
     padding: 10px;
@@ -1008,7 +1170,7 @@ h2{
     border: solid 3px var(--negro);
 }
 
-.pagos  h3{
+.pagos h3 {
     width: 100%;
     border-bottom: solid 3px var(--negro);
     padding: 10px;
@@ -1016,14 +1178,15 @@ h2{
     font-size: 2rem;
 }
 
-.metodo_de_pago{
+.metodo_de_pago {
     border: solid var(--negro);
     padding: 10px;
     border-radius: 20px;
     margin: 20px;
     text-align: center;
 }
-.metodo_de_pago h4{
+
+.metodo_de_pago h4 {
     text-align: center;
     border-bottom: 3px solid var(--negro);
     padding: 10px;
@@ -1031,12 +1194,13 @@ h2{
 }
 
 /* Scrollbar personalizado */
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 10px;
     background: var(--Vinotinto_claro);
 
 }
-body::-webkit-scrollbar-thumb{
+
+body::-webkit-scrollbar-thumb {
     height: 8px;
     border-radius: 10px;
     background: var(--Vinotinto);
@@ -1049,26 +1213,30 @@ body::-webkit-scrollbar-thumb{
 /* ----------------------footer------------------------------ */
 
 
-.footer{
+.footer {
     width: 100%;
     background-color: var(--Vinotinto_claro);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.alejandra_footer{
+
+.alejandra_footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0 0 0 ;
+    margin: 10px 0 0 0;
 }
-.alejandra_footer img{
+
+.alejandra_footer img {
     max-width: 40px;
 }
-.alejandra_footer p{
+
+.alejandra_footer p {
     color: var(--gris_claro_metalico);
 }
-.autor{
+
+.autor {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -1076,10 +1244,12 @@ body::-webkit-scrollbar-thumb{
     padding: 10px;
 
 }
-.autor a{
+
+.autor a {
     text-decoration: none;
 }
-.hecho_por{
+
+.hecho_por {
     padding: 10px;
     font-family: "UnifrakturMaguntia", cursive;
     margin: 0;
@@ -1097,36 +1267,41 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--Vinotinto);
 }
 
-.redes_footer{
+.redes_footer {
     background-color: var(--Vinotinto_claro);
 
 }
-.redes_footer img{
+
+.redes_footer img {
     max-width: 40px;
-    margin: 0 5px 0 5px ;
+    margin: 0 5px 0 5px;
 }
 
 @media only screen and (min-width: 768px) {
-    .alejandra_footer{
+    .alejandra_footer {
         display: flex;
         flex-direction: row;
         margin: 10px 0 0 0;
         align-items: center;
     }
-    .footer{
+
+    .footer {
         background-color: var(--Vinotinto_claro);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
-    .footer img{
+
+    .footer img {
         max-width: 40px;
     }
-    .footer p{
+
+    .footer p {
         color: var(--gris_claro_metalico);
     }
-    .autor{
+
+    .autor {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -1134,10 +1309,12 @@ body::-webkit-scrollbar-thumb{
         padding: 10px;
 
     }
-    .autor a{
+
+    .autor a {
         text-decoration: none;
     }
-    .hecho_por{
+
+    .hecho_por {
         padding: 10px;
         font-family: "UnifrakturMaguntia", cursive;
         margin: 0;
@@ -1154,15 +1331,14 @@ body::-webkit-scrollbar-thumb{
         background-color: var(--Vinotinto);
     }
 
-    .redes_footer{
+    .redes_footer {
         background-color: var(--Vinotinto_claro);
 
     }
-    .redes_footer img{
+
+    .redes_footer img {
         max-width: 40px;
-        margin: 0 5px 0 5px ;
+        margin: 0 5px 0 5px;
     }
 
 }
-
-

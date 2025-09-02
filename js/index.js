@@ -155,12 +155,15 @@ if(formulario_de_contacto){
     formulario_de_contacto.addEventListener('submit', function(event){
         event.preventDefault();
 
-        const datos_forma = new FormData(formulario_de_contacto);
+        const datos_formulario = new FormData(formulario_de_contacto);
 
-        const nombre = datos_forma.get('nombre');
-        const apellido = datos_forma.get('apellido');
-        const medida = datos_forma.get('medidas');
-        const descripsion = datos_forma.get('descripsion');
+        const nombre = datos_formulario.get('nombre');
+        const apellido = datos_formulario.get('apellido');
+        const medida = datos_formulario.get('medidas');
+        const descripsion = datos_formulario.get('descripsion');
+
+        const baseUrl = "https://wa.me/584125556677?text=";
+        let textUrlVar = `Hola, mi nombre es ${nombre} ${apellido} y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`
 
 
 
