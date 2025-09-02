@@ -163,7 +163,8 @@ if(formulario_de_contacto){
         const descripsion = datos_formulario.get('descripsion');
 
         const baseUrl = "https://wa.me/584125556677?text=";
-        let textUrlVar = `Hola, mi nombre es ${nombre} ${apellido} y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`
+        let textUrlVar = `Hola, mi nombre es ${nombre} ${apellido} y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`;
+        const messageUrl = baseUrl + escapeUrlCharacters(textUrlVar);
 
 
 
