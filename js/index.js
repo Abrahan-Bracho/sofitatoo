@@ -162,29 +162,13 @@ if(formulario_de_contacto){
         const medida = datos_formulario.get('medidas');
         const descripsion = datos_formulario.get('descripsion');
 
-        const baseUrl = "https://wa.me/584125556677?text=";
+        const baseUrl = "https://wa.me/584126433811?text=";
         let textUrlVar = `Hola, mi nombre es ${nombre} ${apellido} y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`;
-        const messageUrl = baseUrl + escapeUrlCharacters(textUrlVar);
+        const messageUrl = baseUrl + encodeURIComponent(textUrlVar);
 
-
-
-        console.log(nombre, apellido, medida, descripsion);
+        window.open(messageUrl, '_blank');
     });
-
-    // document.getElementById('boton_formulario').addEventListener('click', function(){
-
-    //     enviar_formulario();
-
-    // });
-    
-
-
-
-
-
 }
-
-
 
 // document.getElementById("boton_X_opciones").addEventListener('click', function(){
 //             ocultarBarra();
