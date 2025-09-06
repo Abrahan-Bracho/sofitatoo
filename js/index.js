@@ -1,4 +1,4 @@
-if(document.getElementById("boto_de_opciones") && document.getElementById("barra_opciones")){
+if (document.getElementById("boto_de_opciones") && document.getElementById("barra_opciones")) {
     const boto_de_opciones = document.getElementById("boto_de_opciones");
     const barra_opciones = document.getElementById("barra_opciones");
     const cerrar_barra = document.getElementById("cerrar_barra"); // add this
@@ -8,7 +8,7 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
             right: isMobileScreen() ? '0' : '5%',
             duration: 0.5
         });
-        
+
         document.body.classList.add('overflow-hidden');
         barra_opciones.dataset.visible = "true";
     }
@@ -24,7 +24,7 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
         barra_opciones.dataset.visible = "false";
     }
 
-    boto_de_opciones.addEventListener('click', function() {
+    boto_de_opciones.addEventListener('click', function () {
         if (barra_opciones.dataset.visible === "true") {
             ocultarBarra();
         } else {
@@ -35,7 +35,7 @@ if(document.getElementById("boto_de_opciones") && document.getElementById("barra
     if (cerrar_barra) {
         cerrar_barra.addEventListener('click', ocultarBarra);
     }
-    
+
 
     // Inicialmente oculta
     barra_opciones.dataset.visible = "false";
@@ -79,7 +79,7 @@ if (document.getElementById("contenedor_mini_galeria")) {
 
 const imagenes_galeria = document.querySelectorAll('.contenedor_foto_tatuaje img');
 
-if (imagenes_galeria){
+if (imagenes_galeria) {
 
     const lightbox = document.createElement('div');
     lightbox.classList.add('lightbox');
@@ -87,21 +87,18 @@ if (imagenes_galeria){
 
     const lightboxcloseboton = document.createElement('button');
     lightboxcloseboton.classList.add('lightbox-close');
-    lightboxcloseboton.innerHTML = 'sair >';
-
-    const botonPrueba = document.createElement('button');
-    botonPrueba.classList.add('boton-prueba');
-    botonPrueba.innerHTML = '>';
+    lightboxcloseboton.innerHTML = 'Atras ';
 
 
 
 
-    imagenes_galeria.forEach((imagen)=>{
+
+    imagenes_galeria.forEach((imagen) => {
 
 
 
 
-        imagen.addEventListener("click", function(e){
+        imagen.addEventListener("click", function (e) {
             lightbox.classList.add('active');
             const img = document.createElement('img');
             img.src = imagen.src;
@@ -109,10 +106,9 @@ if (imagenes_galeria){
                 lightbox.removeChild(lightbox.firstChild);
             }
             lightbox.appendChild(img);
+            lightbox.style.animation = "cargarTriangulos 0.5s linear forwards";
             lightbox.appendChild(lightboxcloseboton);
 
-
-            //recuerda que esto es una prueba
 
 
             document.body.classList.add('overflow-hidden');
@@ -120,20 +116,28 @@ if (imagenes_galeria){
         }
         );
 
-        lightbox.addEventListener('click', e=>{
-            
-            if(e.target !== e.currentTarget) return;
-            lightbox.classList.remove('active');
-            console.log("va bien");
-            document.body.classList.remove('overflow-hidden');
-            
+        lightbox.addEventListener('click', e => {
+
+            if (e.target !== e.currentTarget) return;
+            lightbox.style.animation = "bay-img 0.5s linear forwards";
+            setTimeout(function () {
+                lightbox.classList.remove('active');
+                console.log("va bien");
+                document.body.classList.remove('overflow-hidden');
+            }, 1000);
+
+
 
         });
 
 
-        lightboxcloseboton.addEventListener('click', e=>{
-            lightbox.classList.remove('active');
-            document.body.classList.remove('overflow-hidden');
+        lightboxcloseboton.addEventListener('click', e => {
+            lightbox.style.animation = "bay-img 0.5s linear forwards";
+            setTimeout(function () {
+                lightbox.classList.remove('active');
+                console.log("va bien");
+                document.body.classList.remove('overflow-hidden');
+            }, 1000);
         });
     });
 }
@@ -144,15 +148,15 @@ const formulario_de_contacto = document.getElementById('formulario_de_contacto')
 const formulario_nombre = document.querySelector('#nombre');
 const formulario_apellido = document.querySelector('#apellido');
 const formulario_medidas_del_tatuaje = document.querySelector('#medidas_del_tatuaje');
-const formulario_descripsion= document.querySelector('#descripsion');
+const formulario_descripsion = document.querySelector('#descripsion');
 
 
 
 
 
-if(formulario_de_contacto){
+if (formulario_de_contacto) {
 
-    formulario_de_contacto.addEventListener('submit', function(event){
+    formulario_de_contacto.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const datos_formulario = new FormData(formulario_de_contacto);

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/slider.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap"
         rel="stylesheet">
@@ -183,51 +184,91 @@
     <div class="testimonios">
 
 
-        <h3 class="boton_ver_mas"> Que opinan mis clientes?</h3>
+           <section id="testim" class="testim">
+        <!--         <div class="testim-cover"> -->
+        <div class="wrap">
 
-        <div class="contenedor_testimonios">
+            <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+            <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+            <ul id="testim-dots" class="dots">
+                <li class="dot active"></li><!--
+                    -->
+                <li class="dot"></li><!--
+                    -->
+                <li class="dot"></li><!--
+                    -->
+                <li class="dot"></li><!--
+                    -->
+                <li class="dot"></li>
+            </ul>
+            <div id="testim-content" class="cont">
 
-            <div class="comentarios">
-                <div class="comentario">
-                    <img loading="lazy" src="img/tatuajes/7.jpg" alt="sofiatattoo">
-                    
-                    <div class="mostrar-comentario">
-                        <h4>Alejandra Rodriguez</h4>
-                        <p>solo quiero tatuarme con tigosolo quiero tatuarme con tigosolo quiero tatuarme con tigo</p>
-                    </div>
-                    
-
+                <div class="active">
+                    <div class="img"><img   
+                        src="img/tatuajes/3.jpg"
+                        alt=""></div>
+                    <h2>Laura Chirinos</h2>
+                    <p>Me entata tu trabajo, solo quiero tatuarme contigo y me quiero hace una manga.</p>
                 </div>
-                <div class="comentario">
-                    <img loading="lazy" src="img/tatuajes/7.jpg" alt="sofiatattoo">
-                    
-                   <div class="mostrar-comentario">
-                    <h4>Alejandra Rodriguez</h4>    
-                    <p>solo quiero tatuarme con tigosolo quiero tatuarme con tigosolo quiero tatuarme con tigo</p>
-                    </div>
 
+                <div>
+                    <div class="img"><img
+                        src="img/tatuajes/12.jpg"
+                        alt=""></div>
+                    <h2>Carla </h2>
+                    <p>Una gran tatuadora y amiga, un trabajo exelente, tengo cuatro tauajes con ella y contando.</p>
                 </div>
-                <div class="comentario">
-                    <img loading="lazy" src="img/tatuajes/7.jpg" alt="sofiatattoo">
-                    
-                   <div class="mostrar-comentario">
-                    <h4>Alejandra Rodriguez</h4>    
-                    <p>solo quiero tatuarme con tigosolo quiero tatuarme con tigosolo quiero tatuarme con tigo</p>
-                    </div>
 
+                <div>
+                    <div class="img"><img
+                        src="img/tatuajes/8.jpg"
+                        alt=""></div>
+                    <h2>Lorem Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
-                <div class="comentario">
-                    <img loading="lazy" src="img/tatuajes/7.jpg" alt="sofiatattoo">
-                    
-                   <div class="mostrar-comentario">
-                    <h4>Alejandra Rodriguez</h4>    
-                    <p>solo quiero tatuarme con tigosolo quiero tatuarme con tigosolo quiero tatuarme con tigo</p>
-                    </div>
 
+                <div>
+                    <div class="img"><img
+                        src="img/tatuajes/17.jpg"
+                        alt=""></div>
+                    <h2>Lorem De Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
-                
+
+                <div>
+                    <div class="img"><img
+                        src="img/tatuajes/18.jpg"
+                        alt=""></div>
+                    <h2>Ms. Lorem R. Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
 
             </div>
+
+        </div>
+        <!--         </div> -->
+    </section>
+
+
+    </div>
+
+
+    <!-- 
+#### EDIT
+I built this slider when I first started to learn JS, you can rebuild it with more readable, simple and less code, I'm too lazy to update it, sorry :) 
+-->
+
+    <!-- 
+	use the left and right arrow keys on your keyboard or just swipe left and right on your smart phone to interact with the slider
+-->
+
+
+
+
+
 
 
             <div class="cotizar">
@@ -239,19 +280,7 @@
                 </a>
             </div>
 
-        </div>
 
-
-
-    </div>
-
-
-
-
-
-
-
-    
 
 
 
@@ -307,31 +336,31 @@
                 <div class="promocion">
                     <h4> PROMO 1</h4>
                     <img src="img/tatuajes/23.jpg" alt="tatuaje">
-                    <p>2 tatuajes de hasta 3 centímetros por $12</p>
+                    <p class="hide-tex">2 tatuajes de hasta 3 centímetros por $12</p>
                 </div>
 
                 <div class="promocion">
                     <h4>PROMO 2</h4>
                     <img src="img/tatuajes/31.jpg" alt="tatuaje">
-                    <p>2 tatuajes de hasta 5 centímetros por $15</p>
+                    <p class="hide-tex">2 tatuajes de hasta 5 centímetros por $15</p>
                 </div>
 
                 <div class="promocion">
                     <h4>PROMO 3</h4>
                     <img src="img/tatuajes/22.jpg" alt="tatuaje">
-                    <p>5 tatuajes de hasta 5 centímetros por $35</p>
+                    <p class="hide-tex">5 tatuajes de hasta 5 centímetros por $35</p>
                 </div>
 
                 <div class="promocion">
                     <h4>PROMO 4</h4>
                     <img src="img/tatuajes/42.jpg" alt="tatuaje">
-                    <p>Tatuajes en pareja de hasta 6 centímetros por $30</p>
+                    <p class="hide-tex">Tatuajes en pareja de hasta 6 centímetros por $30</p>
                 </div>
 
                 <div class="promocion">
                     <h4>PROMO 5</h4>
                     <img src="img/tatuajes/41.jpg" alt="tatuaje">
-                    <p>tatuajes entre hermanos/as o amistad (hasta 3 personas) por $40</p>
+                    <p class="hide-tex">tatuajes entre hermanos/as o amistad (hasta 3 personas) por $40</p>
                 </div>
 
 
@@ -431,7 +460,8 @@
 
 
 
-
+        <script src="js/slider.js"></script>
+        <script src="https://use.fontawesome.com/1744f3f671.js"></script>
         <script src="js/index.js"></script>
         <script src="js/GSAP.js"></script>
 
