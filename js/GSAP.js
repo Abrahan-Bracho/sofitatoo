@@ -1,12 +1,17 @@
 
+if(document.querySelector("#redes")){
+    let iteradorRedes = 0;
 
-let iteradorRedes = 0;
-
-const redes = document.querySelector("#redes"); 
-const redes_links = document.querySelector("#redes_links"); 
+    const redes = document.querySelector("#redes"); 
+    const redes_links = document.querySelector("#redes_links"); 
 
 
-redes.addEventListener('click', redesF);
+
+    redes.addEventListener('click', redesF);
+
+
+}
+
 
 function redesF(){
 
@@ -69,7 +74,7 @@ function redesF(){
 
 
 
-
+if(document.querySelector(".facebook")){
 const facebook = document.querySelector(".facebook ");
 const hover = gsap.to(facebook, {
   scaleX: 1.1, scaleY:1.1, scaleZ:1.1,
@@ -99,7 +104,7 @@ github.addEventListener("mouseenter", () => hover3.play());
 github.addEventListener("mouseleave", () => hover3.reverse());
 
 
-
+}
 
 //----------------------------------------------------
 

@@ -44,7 +44,8 @@
     background: url(../img/fondo_gotico.jpg) no-repeat center fixed;
     background-size: cover;
     width: 100%;
-    height: auto;
+    min-height: 40vh;
+    height: 400px;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@
     align-items: center;
     padding-top: 5vh;
     border-bottom: solid var(--negro) 3PX;
+    
 }
 
 .logo {
@@ -71,6 +73,10 @@
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+
 }
 
 .contenedor_boton_opciones {
@@ -78,6 +84,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+  
 }
 
 .boto_de_opciones {
@@ -93,7 +101,7 @@
     border: solid #000000;
     transition: 0.5S;
     cursor: pointer;
-    position: sticky;
+    z-index: 100;
 }
 
 .boto_de_opciones>i {
@@ -131,7 +139,7 @@
     height: auto;
     width: 90%;
     position: fixed;
-    top: 5%;
+    top: 10%;
     right: -100%;
     display: flex;
     flex-direction: column;
@@ -139,7 +147,7 @@
     align-items: center;
     border-radius: 20px;
     box-shadow: 0 10px 20px 0 var(--Vinotinto_claro);
-    z-index: 10;
+    z-index: 100;
     padding: 1rem;
 }
 
@@ -282,6 +290,7 @@ h2 {
     margin: 0;
     color: var(--Vinotinto_claro);
     margin: 2rem 0;
+    text-shadow: 0px 10px 10px var(--negro);
 }
 
 .text-red {
@@ -536,9 +545,7 @@ h2 {
     left: 0 !important;
     transition: .5s;
 }
-.img-anima{
 
-}
 
 .no-scroll {
     overflow: hidden !important;
@@ -557,13 +564,13 @@ h2 {
     font-family: "UnifrakturMaguntia", cursive;
     cursor: pointer;
     transition: 0.5s;
+     box-shadow: 0 0 30px 5px var(--negro);
 }
 
 .lightbox-close:hover {
     scale: 1.01;
-    box-shadow: 0 0 50px 5px var(--negro);
+    box-shadow: 0 0 20px 5px var(--negro);
     transition: 0.5s;
-    color: var(--Vinotinto_claro);
 }
 
 .overflow-hidden {
@@ -627,6 +634,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .informacion_artista h3 {
@@ -647,12 +655,31 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
+    .contenedor_artista{
+        flex-direction: row;
+        position: relative;
+    }
+    .contenedor_artista h2{
+        position: absolute;
+        top: 0%;
+        left: 50vw;
+        font-size: 3rem;
+        text-shadow: var(--gris_claro_metalico);
+    }
+
     .img_artista {
-        width: 50%;
+        margin: 20px;
+        max-width: 50%;
+    }
+    .informacion_artista{
+                margin-top: 10vw;
+                max-width: 40%;
     }
 
     .informacion_artista P {
-        width: 50%;
+
+        width: 100%;
+        font-size: 1.5rem;
     }
 
 }
@@ -721,10 +748,11 @@ h2 {
     transition: 0.5s;
     position: relative;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-family: "Helvetica";
     box-shadow: #fffccf49 0 0px 70px 20px;
     transition: 0.5s;
+    text-align: center;
 
 }
 .boton_cotizar:hover {
@@ -756,8 +784,8 @@ h2 {
 
 .borde-interno-del-boton {
     position: absolute;
-    height: 50px;
-    width: 220px;
+    height: 70%;
+    width: 80%;
     border: solid 1px var(--negro);
 }
 
@@ -820,11 +848,10 @@ h2 {
 
 }
 
-.estilos h3 {
+.estilos h2 {
     font-family: "UnifrakturMaguntia", cursive;
     color: var(--gris_claro_metalico);
-    font-size: 3rem;
-    text-shadow: 0px 10px 10px var(--negro);
+    
 }
 
 .estilos p {
@@ -919,9 +946,9 @@ h2 {
     text-align: center;
 }
 
-.Contenedor_promociones h3 {
+.Contenedor_promociones h2 {
     font-family: "UnifrakturMaguntia", cursive;
-    font-size: 3rem;
+   
     color: var(--gris_claro_metalico1);
 }
 
@@ -967,9 +994,14 @@ h2 {
     text-align: center;
     font-family: "UnifrakturMaguntia", cursive;
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 0px 0;
     color: var(--gris_claro_metalico);
     z-index: 4;
+    position: absolute;
+    background-color: #2d2d2de1;
+    color: #4A1A1A;
+    width: 100%;
+    padding: 5px;
 }
 
 .hide-tex {
@@ -982,7 +1014,8 @@ h2 {
     right: 0;
     z-index: 3;
     transition: .5s;
-    background-color: #2d2d2de1;
+    background: #2D2D2DE1;
+    background: linear-gradient(180deg,rgba(45, 45, 45, 0.83) 19%, rgba(45, 45, 45, 0.93) 61%, rgba(74, 26, 26, 0.99) 93%);
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -1065,6 +1098,8 @@ h2 {
     background-color: var(--Vinotinto_claro);
 }
 
+
+
 .contenedor_preguntas_frecuentes {
     width: 80%;
     display: flex;
@@ -1074,16 +1109,31 @@ h2 {
 }
 
 .contenedor_preguntas_frecuentes details {
-    background-color: var(--Vinotinto);
+    background: #4A1A1A;
+background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 50%, rgba(74, 26, 26, 0.99) 100%);
     margin: 10px;
     padding: 10px;
     color: var(--gris_claro_metalico);
     border: solid 1px var(--negro);
     border-radius: 3px;
     transition: 0.5s;
-
+    width: 90%;
+    border-radius: 3px;
 }
 
+
+.contenedor_preguntas_frecuentes summary{
+    color: #808080;
+    border-bottom: solid 2px var(--negro);
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.contenedor_preguntas_frecuentes p {
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 1rem;
+}
 
 
 

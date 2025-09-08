@@ -1,0 +1,52 @@
+
+/* Positioning and Sizing the Canvas  */
+
+#flag {
+	position: absolute;
+	width: 380px;
+	height: 280px;
+	left: 45%;
+	top: 40%;
+	z-index: 100;
+  
+  /* Opacity for the Canvas.  
+  You can make pretty things using the opacity property.  */
+  
+	opacity: 0.80;
+  
+  
+  /* Little tweak to make sure the canvas doesn't get
+  smooshed against the edges of the window. 
+  
+ The equivalent margin shorthand.
+  margin: { 0,50px,0,50px; }   
+  
+TRouBLe Margin Padding Memory Trick: https://css-tricks.com/remember-the-order-of-marginpadding-shorthand-with-trouble/*/
+  
+	margin-right:50px;
+  margin-left:50px;
+
+}
+
+/* Media Queries to make the canvas responsive  */
+
+ 
+@media (max-width: 300 ) {
+#flag {
+	width: 260px;
+	height: 180px;
+}
+}
+
+/* RESPONSIVE PAGE IMAGE BACKGROUND
+
+The equivalent shorthand CSS notation. 
+
+body {
+  background: url(path/background-image.jpg) center center cover no-repeat fixed;
+}
+
+
+*/
+
+  
