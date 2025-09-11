@@ -5,104 +5,105 @@
 
 
 window.addEventListener('scroll', function () {
-    if (window.innerWidth <= 768){
-    var y = window.scrollY;
-    console.log( y)
-    if (y >= 150) {
-
-        gsap.to(".logo_img ", {
-            position: 'fixed',
-            top: '5',
-            left: '10',
-            width: '70px',
-            height: '70px',
-            backgroundImage: 'url("../img/sofiatattoo.-Photoroom.png")',
-        });
 
 
-    }
-    if (y >= 360) {
+
+    // if (window.innerWidth = 768){
+    //      if (y >= 1) {
+
+    //     gsap.to(".logo_img ", {
+    //         position: 'fixed',
+    //         top: '5',
+    //         left: '10',
+    //         width: '70px',
+    //         height: '70px',
+    //         backgroundImage: 'url("../img/sofiatattoo.-Photoroom.png")',
+    //     });
 
 
-        gsap.to(".boto_de_opciones ", {
-            position: 'fixed',
-             top: '5',
-            width: '60px',
-            height: '60px',
-
-        });
-        console.log('se esta ejecutando', y)
-    }
-
-    if (y <= 200) {
-        gsap.to(".logo_img ", {
-            position: 'static',
-            width: '300px',
-            height: '300px',
-            backgroundImage: 'url("../img/sofiatatoo_letras.png")',
-        });
-
-        
-    }
-    if (y <= 360) {
-
-        gsap.to(".boto_de_opciones ", {
-            position: 'static',
-            width: '75px',
-            height: '75px',
-
-        });
-        console.log('se esta ejecutando', y)
-    }
-    }else{
-         if (y >= 150) {
-
-        gsap.to(".logo_img ", {
-            position: 'fixed',
-            top: '5',
-            left: '10',
-            width: '70px',
-            height: '70px',
-            backgroundImage: 'url("../img/sofiatattoo.-Photoroom.png")',
-        });
+    //     }
+    //     if (y >= 360) {
 
 
-    }
-    if (y >= 360) {
+    //         gsap.to(".boto_de_opciones ", {
+    //             position: 'fixed',
+    //             top: '5',
+    //             width: '60px',
+    //             height: '60px',
+
+    //         });
+    //     }
+
+    //     if (y <= 200) {
+    //         gsap.to(".logo_img ", {
+    //             position: 'static',
+    //             width: '300px',
+    //             height: '300px',
+    //             backgroundImage: 'url("../img/sofiatatoo_letras.png")',
+    //         });
+
+            
+    //     }
+    //     if (y <= 360) {
+
+    //         gsap.to(".boto_de_opciones ", {
+    //             position: 'static',
+    //             width: '75px',
+    //             height: '75px',
+
+    //         });
+    //     }
+
+    // }
+    // if (window.innerWidth <= 768){
+    //     var y = window.scrollY;
+    //     console.log( y)
+    //     if (y >= 150) {
+
+    //         gsap.to(".logo_img ", {
+    //             position: 'fixed',
+    //             top: '5',
+    //             left: '10',
+    //             width: '70px',
+    //             height: '70px',
+    //             backgroundImage: 'url("../img/sofiatattoo.-Photoroom.png")',
+    //         });
 
 
-        gsap.to(".boto_de_opciones ", {
-            position: 'fixed',
-             top: '5',
-            width: '60px',
-            height: '60px',
+    //     }
+    //     if (y >= 360) {
 
-        });
-        console.log('se esta ejecutando', y)
-    }
 
-    if (y <= 200) {
-        gsap.to(".logo_img ", {
-            position: 'static',
-            width: '300px',
-            height: '300px',
-            backgroundImage: 'url("../img/sofiatatoo_letras.png")',
-        });
+    //         gsap.to(".boto_de_opciones ", {
+    //             position: 'fixed',
+    //             top: '5',
+    //             width: '60px',
+    //             height: '60px',
 
-        
-    }
-    if (y <= 360) {
+    //         });
+    //     }
 
-        gsap.to(".boto_de_opciones ", {
-            position: 'static',
-            width: '75px',
-            height: '75px',
+    //     if (y <= 200) {
+    //         gsap.to(".logo_img ", {
+    //             position: 'static',
+    //             width: '300px',
+    //             height: '300px',
+    //             backgroundImage: 'url("../img/sofiatatoo_letras.png")',
+    //         });
 
-        });
-        console.log('se esta ejecutando', y)
-    }
+            
+    //     }
+    //     if (y <= 360) {
 
-    }
+    //         gsap.to(".boto_de_opciones ", {
+    //             position: 'static',
+    //             width: '75px',
+    //             height: '75px',
+
+    //         });
+    //     }
+    // }
+    
     
 });
 

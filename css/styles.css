@@ -7,6 +7,9 @@
 }
 
 
+
+
+
 .body {
     /* background-color: var(--gris_claro_metalico) ; */
     background: var(--gris_claro_metalico);
@@ -34,11 +37,8 @@
     margin-bottom: 2rem;
 }
 
-.unifrakturmaguntia-regular {
-    font-family: "UnifrakturMaguntia", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+
+
 
 .header_continer {
     background: url(../img/fondo_gotico.jpg) no-repeat center fixed;
@@ -53,7 +53,7 @@
     align-items: center;
     padding-top: 5vh;
     border-bottom: solid var(--negro) 3PX;
-    
+    position: absolute;
 }
 
 .logo {
@@ -84,12 +84,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-  
+    position: sticky;
+    top: 0;
+    margin-top: 300px;
+    margin-bottom: 50px;
+  z-index: 100;
 }
 
 .boto_de_opciones {
-    background-color: var(--gris_claro_metalico);
+    background-color: #808080a0;
     height: 75px;
     width: 75px;
     border-radius: 50%;
@@ -102,6 +105,7 @@
     transition: 0.5S;
     cursor: pointer;
     z-index: 100;
+    
 }
 
 .boto_de_opciones>i {
@@ -127,6 +131,12 @@
 @media only screen and (min-width: 768px) {
     .logo_img {
         width: 50%;
+    }
+    .contenedor_boton_opciones{
+        margin-top: 350px;
+    }
+    .header_continer{
+        height: 500px;
     }
 }
 
@@ -284,13 +294,13 @@
 }
 
 h2 {
-    font-family: "UnifrakturMaguntia", cursive;
+    font-family: "Cinzel Decorative", serif;
     text-align: center;
     font-size: 2.5em;
     margin: 0;
     color: var(--Vinotinto_claro);
     margin: 2rem 0;
-    text-shadow: 0px 10px 10px var(--negro);
+    text-shadow: 0px 10px 10px #000000cb;
 }
 
 .text-red {
@@ -448,10 +458,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .goth_btn>span {
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .goth_btn:hover {
@@ -535,6 +547,7 @@ h2 {
     border-radius: 4px;
     border: solid var(--Vinotinto) 2px;
     transition: .5s;
+    margin-top: 20%;
 }
 
 .lightbox.active {
@@ -582,6 +595,9 @@ h2 {
     .lightbox-close{
         width: 20%;
     }
+    .lightbox img{
+        margin-top: 5%;
+    }
 
 
 }   
@@ -608,7 +624,7 @@ h2 {
 .foto_ale {
     width: 100%;
     border: solid;
-    border-radius: 20px;
+    border-radius: 3px;
     clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
     z-index: 2;
 }
@@ -637,9 +653,8 @@ h2 {
     
 }
 
-.informacion_artista h3 {
+.informacion_artista h2 {
     font-size: 2rem;
-    font-family: "UnifrakturMaguntia", cursive;
     margin: 20px 0 10px 0;
     border-bottom: solid 3px var(--negro);
 }
@@ -656,28 +671,29 @@ h2 {
 
 @media only screen and (min-width: 768px) {
     .contenedor_artista{
-        flex-direction: row;
+        flex-direction: column;
         position: relative;
     }
     .contenedor_artista h2{
-        position: absolute;
-        top: 0%;
-        left: 50vw;
-        font-size: 3rem;
-        text-shadow: var(--gris_claro_metalico);
+    }
+    .img-datos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .img_artista {
         margin: 20px;
-        max-width: 50%;
+        max-width: 40%;
+        height: 100%;
+        justify-content: center;
     }
     .informacion_artista{
-                margin-top: 10vw;
-                max-width: 40%;
+     max-width: 40%;
     }
 
     .informacion_artista P {
-
         width: 100%;
         font-size: 1.5rem;
     }
@@ -706,7 +722,10 @@ h2 {
     min-height: 500px;
     width: 100%;
 }
-
+.arrow{
+    width: 50px !important;
+    height: 50px !important;
+}
 
 
 
@@ -723,16 +742,11 @@ h2 {
     height: 50px;
     justify-content: center;
 }
-
-.cotizar {
-    margin: 100px 0;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 50px;
-    justify-content: center;
+.cotizar img{
+    cursor: pointer;
+    z-index: 10;
 }
+
 
 .boton_cotizar {
     text-decoration: none;
@@ -753,7 +767,6 @@ h2 {
     box-shadow: #fffccf49 0 0px 70px 20px;
     transition: 0.5s;
     text-align: center;
-
 }
 .boton_cotizar:hover {
     scale: 1.04;
@@ -762,6 +775,7 @@ h2 {
     background-color: #a55757;
      background: linear-gradient(90deg, rgb(110, 50, 50) 0%, rgb(160, 79, 79) 50%, rgb(110, 50, 50) 100%);
      transition: 0.5s;
+     cursor: pointer;
 }
 
 .boton_cotizar p {
@@ -831,6 +845,10 @@ h2 {
     .boton_cotizar{
         width: 20%;
     }
+    .arrow{
+    width: 100px !important;
+    height: 100px !important;
+    }
 
 }
 
@@ -849,7 +867,6 @@ h2 {
 }
 
 .estilos h2 {
-    font-family: "UnifrakturMaguntia", cursive;
     color: var(--gris_claro_metalico);
     
 }
@@ -872,6 +889,7 @@ h2 {
 .estilo {
     width: 45%;
     height: 30vh;
+    height: -webkit-fill-available;
     /* border: solid 1px var(--negro); */
 
     padding: 5px;
@@ -900,6 +918,7 @@ h2 {
     font-size: 2rem;
     border-bottom: solid 3px var(--gris_claro_metalico);
     width: 100%;
+    overflow-wrap: break-word;
 }
 
 .estilo p {
@@ -910,7 +929,8 @@ h2 {
 
     .estilo {
         width: 15%;
-        height: 30vh;
+        height: 100%;
+        height: -webkit-fill-available;
         margin: 0;
         margin-bottom: 30px;
     }
@@ -937,6 +957,7 @@ h2 {
 
 .Contenedor_promociones {
     max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -947,10 +968,11 @@ h2 {
 }
 
 .Contenedor_promociones h2 {
-    font-family: "UnifrakturMaguntia", cursive;
    
     color: var(--gris_claro_metalico1);
+
 }
+
 
 .Contenedor_promociones p {
     font-size: 1.5rem;
@@ -979,11 +1001,12 @@ h2 {
     background: linear-gradient(179deg, rgba(143, 77, 77, 1) 0%, rgba(74, 26, 26, 1) 100%);
     clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
     position: relative;
+    transition: 0.5s;
 }
 
 
 .promocion:hover {
-    animation: bandera-wave 2.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+    transform:  rotatex(-20deg) ;
 
 }
 .promocion:hover .hide-tex  {
@@ -1009,13 +1032,14 @@ h2 {
     color: var(--vinotinto-brillante);
     font-size: 1.2rem;
     margin: 10px 0;
+    padding: 40px 0;
     position: absolute;
     bottom: -150%;
     right: 0;
     z-index: 3;
     transition: .5s;
-    background: #2D2D2DE1;
-    background: linear-gradient(180deg,rgba(45, 45, 45, 0.83) 19%, rgba(45, 45, 45, 0.93) 61%, rgba(74, 26, 26, 0.99) 93%);
+  background: rgba(45, 45, 45, 10.03);
+background: linear-gradient(180deg, rgba(45, 45, 45, 0.83) 0%, rgba(63, 33, 33, 1) 49%, rgba(74, 26, 26, 1) 87%, rgba(74, 26, 26, 0) 100%);
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -1041,32 +1065,6 @@ h2 {
 }
 
 
-
-@keyframes bandera-wave {
-    0% {
-        transform: perspective(600px) rotateY(0deg) skewY(0deg);
-    }
-
-    20% {
-        transform: perspective(600px) rotateY(-6deg) skewY(-2deg);
-    }
-
-    40% {
-        transform: perspective(600px) rotateY(6deg) skewY(2deg);
-    }
-
-    60% {
-        transform: perspective(600px) rotateY(-4deg) skewY(-1deg);
-    }
-
-    80% {
-        transform: perspective(600px) rotateY(4deg) skewY(1deg);
-    }
-
-    100% {
-        transform: perspective(600px) rotateY(0deg) skewY(0deg);
-    }
-}
 
 
 
@@ -1125,14 +1123,17 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
 .contenedor_preguntas_frecuentes summary{
     color: #808080;
     border-bottom: solid 2px var(--negro);
-    padding: 5px 10px;
+    padding: 5px 5px;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
+       text-overflow:initial;
+       text-underline-offset: none;
 }
 .contenedor_preguntas_frecuentes p {
     padding: 5px;
     border-radius: 3px;
     font-size: 1rem;
+ 
 }
 
 
@@ -1146,6 +1147,7 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
 
 .contactos_contenedor {
     width: 100%;
+    margin-top: 100px;
 }
 
 .cuntactos {
@@ -1162,7 +1164,7 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
     padding: 10px;
     margin: 20px;
     color: var(--gris_claro_metalico);
-    border-radius: 20px;
+    border-radius: 3px;
     width: 80%;
     text-align: center;
     font-size: 1.5rem;
@@ -1170,14 +1172,15 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
 
 .redeses_contactos {
     background-color: var(--Vinotinto_claro);
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: var(--gris_claro_metalico);
-    border-radius: 20px;
+    border-radius: 3px;
 }
 
 .redeses_contactos a {
@@ -1185,8 +1188,8 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border: solid var(--gris_claro_metalico) 3px;
-    border-radius: 20px;
+    border: solid var(--gris_claro_metalico) 1px;
+    border-radius: 3px;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
@@ -1210,24 +1213,24 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
     padding: 10px;
     color: var(--gris_claro_metalico);
     width: 80%;
-    border-radius: 20px;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.5rem;
-    border: solid 3px var(--negro);
+    border: solid 1px var(--negro);
 }
 
 .pagos h3 {
     width: 100%;
-    border-bottom: solid 3px var(--negro);
+    border-bottom: solid 1px var(--negro);
     padding: 10px;
     text-align: center;
     font-size: 2rem;
 }
 
 .metodo_de_pago {
-    border: solid var(--negro);
+    border: solid 1px var(--negro);
     padding: 10px;
     border-radius: 20px;
     margin: 20px;
@@ -1236,7 +1239,7 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
 
 .metodo_de_pago h4 {
     text-align: center;
-    border-bottom: 3px solid var(--negro);
+    border-bottom: 1px solid var(--negro);
     padding: 10px;
 
 }
@@ -1256,6 +1259,79 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Firefox */
+
+
+
+
+.formulario_de_contacto{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.form-cont{
+    width: 80%;
+    background-color: var(--Vinotinto_claro);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form-cont label{
+    color: var(--gris_claro_metalico);
+    margin: 10px;
+    border-radius: 3px;
+     height: 30px;
+}
+.form-cont input{
+    margin: 5px 0;
+    border-radius: 3px;
+     height: 30px;
+     width: 100%;
+}
+.form-cont select{
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 3px;
+     height: 30px;
+}
+
+.form-cont textarea{
+    max-width: 100%;
+    max-height: 10lh;
+    min-width: 100%;
+    min-block-size: 50px;
+    border-radius: 3px;
+}
+.form-cont button{
+    width: 50%;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    font-family: "Cinzel Decorative", serif;
+    color: var(--gris_claro_metalico);
+    background-color: var(--Vinotinto);
+    border: solid var(--gris_claro_metalico) 3px;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .formulario_de_contacto{
+        margin-top: 200px;
+    }
+    .form-cont{
+        max-width: 50%;
+    }
+}
+
+
+
+
 
 
 /* ----------------------footer------------------------------ */
