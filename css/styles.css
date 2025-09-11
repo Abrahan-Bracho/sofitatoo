@@ -264,12 +264,18 @@
     text-align: center;
     width: 100%;
     padding-top: 2rem;
+    margin-top: 20px;
 }
 
 .presentacion p {
     font-family: Helvetica;
-    font-size: 22px;
-    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Parisienne", cursive;
+    margin: 20px 0;
+    color: var(--Vinotinto_claro);
+    border-bottom: solid 2px var(--Vinotinto_claro);
+    display: inline;
 }
 
 .presentacion img {
@@ -650,7 +656,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: space-evenly;
 }
 
 .informacion_artista h2 {
@@ -661,12 +667,12 @@ h2 {
 
 .informacion_artista P {
     text-align: center;
-    background-color: var(--Vinotinto_claro);
-    WIDTH: 90%;
+    background: #2E2C2C;
+    background: linear-gradient(150deg, rgba(46, 44, 44, 0.9) 0%, rgba(48, 43, 43, 1) 45%, rgba(48, 43, 43, 0.82) 100%);    width: 90%;
     padding: 20px;
     font-size: 1rem;
     color: var(--gris_claro_metalico);
-    border-radius: 20px;
+    border-radius: 3px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -674,12 +680,10 @@ h2 {
         flex-direction: column;
         position: relative;
     }
-    .contenedor_artista h2{
-    }
     .img-datos{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
     }
 
