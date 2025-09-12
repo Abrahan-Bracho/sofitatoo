@@ -1354,7 +1354,7 @@ text-align: center;
 .form-cont button{
     width: 50%;
     height: 50px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-radius: 3px;
     font-family: "Cinzel Decorative", serif;
     color: var(--gris_claro_metalico);
