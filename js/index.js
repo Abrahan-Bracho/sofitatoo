@@ -279,12 +279,11 @@ if (formulario_de_contacto) {
         const datos_formulario = new FormData(formulario_de_contacto);
 
         const nombre = datos_formulario.get('nombre');
-        const apellido = datos_formulario.get('apellido');
         const medida = datos_formulario.get('medidas');
         const descripsion = datos_formulario.get('descripsion');
 
         const baseUrl = "https://wa.me/584126433811?text=";
-        let textUrlVar = `Hola, mi nombre es ${nombre} ${apellido} y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`;
+        let textUrlVar = `Hola, mi nombre es ${nombre}  y estoy interesado en un tatuaje de ${medida} centimetros de acuerdo a esta descripcion: ${descripsion}`;
         const messageUrl = baseUrl + encodeURIComponent(textUrlVar);
 
         window.open(messageUrl, '_blank');

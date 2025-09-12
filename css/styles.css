@@ -564,7 +564,7 @@ h2 {
     border-radius: 4px;
     border: solid var(--Vinotinto) 2px;
     transition: .5s;
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 .lightbox.active {
@@ -583,7 +583,7 @@ h2 {
 
 .lightbox-close {
     z-index: 30;
-    width: 60%;
+    width: 40%;
     background-color: var(--Vinotinto);
     color: var(--gris_claro_metalico);
     padding: 5px 10px;
@@ -591,7 +591,7 @@ h2 {
     border: solid 1px var(--negro);
     border-radius: 3px;
     font-size: 1.5rem;
-    font-family: "UnifrakturMaguntia", cursive;
+    
     cursor: pointer;
     transition: 0.5s;
 }
@@ -767,7 +767,7 @@ h2 {
     text-decoration: none;
     color: rgb(255 255 255 / 65%);
     background-image: none;
-    background: linear-gradient(90deg, rgba(74, 26, 26, 1) 0%, rgb(117, 47, 47) 50%, rgba(74, 26, 26, 1) 100%);
+    background: linear-gradient(90deg, rgba(74, 26, 26, 1) 0%, rgb(146, 12, 12) 50%, rgba(74, 26, 26, 1) 100%);
     padding: 10px 20px;
     height: 80px;
     width: 60%;
@@ -788,7 +788,7 @@ h2 {
     transition: 0.5s;
     box-shadow: #fffeee 0px 0px 90px 30px;
     background-color: #a55757;
-     background: linear-gradient(90deg, rgb(110, 50, 50) 0%, rgb(160, 79, 79) 50%, rgb(110, 50, 50) 100%);
+     background: linear-gradient(90deg, rgb(110, 50, 50) 0%, rgb(207, 48, 48) 50%, rgb(110, 50, 50) 100%);
      transition: 0.5s;
      cursor: pointer;
 }

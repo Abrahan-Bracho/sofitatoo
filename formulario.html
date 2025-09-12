@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <meta charset="UTF-8">
@@ -12,57 +11,61 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/bandera.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Cinzel+Decorative:wght@400;700;900&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65700ede6a.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body">
-
-
-    <!-- aqui esta la cabeza de pa paguina y el menu de opciones -->
-
-
+    <!-- aqui esta la cabeza de la pagina y el menu de opciones -->
     <div class="header_continer">
         <div class="logo">
-            <a href="index.html" class="logo_img" id="logo_img" > </a>
+            <a href="index.html" class="logo_img" id="logo_img"> </a>
         </div>
 
-      
+
 
 
     </div>
 
 
 
-      <div class="contenedor_boton_opciones">
-            <div id="boto_de_opciones" class="boto_de_opciones">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-
-        </div>
-        <div id="barra_opciones" class="barra_opciones">
-            <i class="fa-solid fa-xmark" id="cerrar_barra"></i>
-
-            <img class="logo_opciones" src="img/sofiatattoo.-Photoroom.png" alt="Logo sofiatattoo">
-            <a class="opcion" href="index.html">Principal</a>
-            <a class="opcion" href="galeria.html">Galería</a>
-            <a class="opcion" href="contactos.html">Contactos</a>
-            <a class="opcion" href="artista.html">Artista</a>
-
-            <div class="contenedor_opcion_redes">
-                <a href="https://www.instagram.com/sofiatattoo.art/" target="_blank">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/alesofia.bermudez" target="_blank">
-                    <i class="fa-brands fa-square-facebook"></i>
-                </a>
-                <a href=" http://wa.me/+5804141655695" target="_blank">
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                </a>
-            </div>
+    <div class="contenedor_boton_opciones">
+        <div id="boto_de_opciones" class="boto_de_opciones">
+            <i class="fa-solid fa-bars"></i>
         </div>
 
+    </div>
+    <div id="barra_opciones" class="barra_opciones">
+        <i class="fa-solid fa-xmark" id="cerrar_barra"></i>
+
+        <img class="logo_opciones" src="img/sofiatattoo.-Photoroom.png" alt="Logo sofiatattoo">
+        <a class="opcion" href="index.html">Principal</a>
+        <a class="opcion" href="galeria.html">Galería</a>
+        <a class="opcion" href="contactos.html">Contactos</a>
+        <a class="opcion" href="artista.html">Artista</a>
+
+        <div class="contenedor_opcion_redes">
+            <a href="https://www.instagram.com/sofiatattoo.art/" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/alesofia.bermudez" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href=" http://wa.me/+5804141655695" target="_blank">
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </a>
+        </div>
+    </div>
 
 
 
@@ -73,12 +76,9 @@
 
         <form id="formulario_de_contacto" class="form-cont" action="">
             <label for="name">nombre</label>
-            <input placeholder="nombre" name="nombre" id="nombre" type="text">
+            <input placeholder="nombre y apellido" name="nombre" id="nombre" type="text">
             <br>
 
-            <label for="lastname">Apellido</label>
-            <input  placeholder="apellido" name="apellido" id="apellido" type="text">
-            <br>
 
             <label for="medida">Elegir una medida</label>
             <select  name="medidas" id="medidas_del_tatuaje">
@@ -87,11 +87,12 @@
                 <option value="10">10 Centimetros</option>
                 <option value="15">15 Centimetros</option>
                 <option value="20">20 Centimetros</option>
+                <option value="20"> mas de 20 Centimetros</option>
 
             </select>
             <br>
             <label for="descripsion"> Descripcion</label>
-            <textarea placeholder="descripcion de lo que tienes  pensado para  tu tatuaje" name="descripsion" id="descripsion" rows="6" type="text" ></textarea>
+            <textarea placeholder="escribe  de lo que tienes  pensado para  tu tatuaje" name="descripsion" id="descripsion" rows="6" type="text" ></textarea>
             <br>
             <button id="boton_formulario" type="submit" >contactar</button>
 
