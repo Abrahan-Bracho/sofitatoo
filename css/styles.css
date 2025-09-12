@@ -19,6 +19,19 @@
     font-family: "Helvetica", sans-serif;
 }
 
+
+h2 {
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--Vinotinto_claro);
+    margin: 2rem 0;
+    text-shadow: 0px 10px 10px #000000cb;
+    width: 100%;
+}
+
+
 .degradado-claro-oscuro {
     margin-top: 2rem;
     height: 75px;
@@ -101,7 +114,7 @@
     justify-items: center;
     align-items: center;
     align-content: space-evenly;
-    border: solid #000000;
+    border: solid #000000 1px;
     transition: 0.5S;
     cursor: pointer;
     z-index: 100;
@@ -268,10 +281,10 @@
 }
 
 .presentacion p {
-    font-family: Helvetica;
     font-size: 2rem;
     font-weight: 600;
     font-family: "Parisienne", cursive;
+    line-height: 1.5;
     margin: 20px 0;
     color: var(--Vinotinto_claro);
     border-bottom: solid 2px var(--Vinotinto_claro);
@@ -299,15 +312,7 @@
     width: 100%;
 }
 
-h2 {
-    font-family: "Cinzel Decorative", serif;
-    text-align: center;
-    font-size: 2.5em;
-    margin: 0;
-    color: var(--Vinotinto_claro);
-    margin: 2rem 0;
-    text-shadow: 0px 10px 10px #000000cb;
-}
+
 
 .text-red {
     color: var(--gris_claro_metalico);
@@ -319,6 +324,9 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.contenedor_galeria{
+    margin-top: 50px;
 }
 
 .linea_decrativa2 {
@@ -520,6 +528,9 @@ h2 {
     .contenedordelcontenedorfototatuaje:has(.contenedor_foto_tatuaje:hover) {
         box-shadow: #4A1A1A -15px 25px 35px;
     }
+    .contenedor_galeria{
+    margin-top: 100px;
+}
 }
 
 /* Efecto de agrandar imagen tipo lightbox simple */
@@ -583,12 +594,10 @@ h2 {
     font-family: "UnifrakturMaguntia", cursive;
     cursor: pointer;
     transition: 0.5s;
-     box-shadow: 0 0 30px 5px var(--negro);
 }
 
 .lightbox-close:hover {
     scale: 1.01;
-    box-shadow: 0 0 20px 5px var(--negro);
     transition: 0.5s;
 }
 
@@ -699,7 +708,9 @@ h2 {
 
     .informacion_artista P {
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1.5vw;
+        height: 35vw;
+
     }
 
 }
@@ -748,7 +759,7 @@ h2 {
 }
 .cotizar img{
     cursor: pointer;
-    z-index: 10;
+    z-index: 5;
 }
 
 
@@ -783,7 +794,8 @@ h2 {
 }
 
 .boton_cotizar p {
-    z-index: 5;
+    z-index: 6;
+    cursor: pointer;
 }
 
 .img-uno {
@@ -919,7 +931,7 @@ h2 {
 
 .estilo h4 {
     font-family: "UnifrakturMaguntia", cursive;
-    font-size: 2rem;
+    font-size: 8vw;
     border-bottom: solid 3px var(--gris_claro_metalico);
     width: 100%;
     overflow-wrap: break-word;
@@ -932,7 +944,7 @@ h2 {
 @media only screen and (min-width: 768px) {
 
     .estilo {
-        width: 15%;
+        width: 23%;
         height: 100%;
         height: -webkit-fill-available;
         margin: 0;
@@ -942,6 +954,9 @@ h2 {
     .estilos {
         width: 100%;
 
+    }
+    .estilo h4{
+        font-size: 3vw;
     }
 
     .contenedor_estilos {
@@ -974,6 +989,7 @@ h2 {
 .Contenedor_promociones h2 {
    
     color: var(--gris_claro_metalico1);
+
 
 }
 
@@ -1062,6 +1078,11 @@ background: linear-gradient(180deg, rgba(45, 45, 45, 0.83) 0%, rgba(63, 33, 33, 
     .promocion {
         width: 15%;
         margin-bottom: 30px;
+
+    }
+    .Contenedor_promociones h2 {
+   
+
 
     }
 
@@ -1273,6 +1294,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    
 }
 
 .form-cont{
@@ -1282,7 +1304,9 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    border: solid var(--gris_claro_metalico) 1px;
+    box-shadow: var(--negro) 0px  0px 20px;
+    
 }
 .form-cont label{
     color: var(--gris_claro_metalico);
@@ -1295,12 +1319,20 @@ body::-webkit-scrollbar-thumb {
     border-radius: 3px;
      height: 30px;
      width: 100%;
+     background-color: var(--Vinotinto_claro);
+     color: var(--gris_claro_metalico);
+     border: solid var(--gris_claro_metalico) 1px;
+     text-align: center;
 }
 .form-cont select{
     margin: 10px 0;
     width: 100%;
     border-radius: 3px;
      height: 30px;
+          background-color: var(--Vinotinto_claro);
+     color: var(--gris_claro_metalico);
+     border: solid var(--gris_claro_metalico) 1px;
+     text-align: center;
 }
 
 .form-cont textarea{
@@ -1309,6 +1341,12 @@ body::-webkit-scrollbar-thumb {
     min-width: 100%;
     min-block-size: 50px;
     border-radius: 3px;
+    padding: 10px;
+    background-color: var(--Vinotinto_claro);
+     color: var(--gris_claro_metalico);
+     border: solid var(--gris_claro_metalico) 1px;
+     resize: vertical;
+text-align: center;
 }
 .form-cont button{
     width: 50%;
@@ -1318,7 +1356,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Cinzel Decorative", serif;
     color: var(--gris_claro_metalico);
     background-color: var(--Vinotinto);
-    border: solid var(--gris_claro_metalico) 3px;
+    border: solid var(--gris_claro_metalico) 1px;
 }
 
 

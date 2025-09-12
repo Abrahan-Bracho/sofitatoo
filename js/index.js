@@ -122,7 +122,7 @@ if (document.getElementById("boto_de_opciones") && document.getElementById("barr
 
     function mostrarBarra() {
         gsap.to(barra_opciones, {
-            right: isMobileScreen() ? '0' : '5%',
+            right: isMobileScreen() ? '5%' : '5%',
             duration: 0.5
         });
 
