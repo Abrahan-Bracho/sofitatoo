@@ -1296,7 +1296,10 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     
 }
-
+.formulario_de_contacto p {
+    max-width: 80%;
+    text-align: center;
+}
 .form-cont{
     width: 80%;
     background-color: var(--Vinotinto_claro);
@@ -1367,7 +1370,7 @@ text-align: center;
         margin-top: 200px;
     }
     .form-cont{
-        max-width: 50%;
+        max-width: 40%;
     }
 }
 
