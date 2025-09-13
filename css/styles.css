@@ -69,8 +69,9 @@ h2 {
 
 }
 .header_continer video{
-margin-top: -7%;
-    width: 100%;
+margin-top: 0%;
+    width: auto;
+    height: 100%;
     position: absolute;
     filter: brightness(0.5) blur(5px);
 }
@@ -157,6 +158,13 @@ position: absolute;
     .header_continer{
         height: 500px;
     }
+    .header_continer video{
+    margin-top: -7%;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    filter: brightness(0.5) blur(5px);
+}
 }
 
 /*   barra de opciones--------------------------*/
