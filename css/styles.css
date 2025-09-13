@@ -54,19 +54,25 @@ h2 {
 
 
 .header_continer {
-    background: url(../img/fondo_gotico.jpg) no-repeat center fixed;
+    /* background: url(../img/fondo_gotico.jpg) no-repeat center fixed; */
     background-size: cover;
     width: 100%;
     min-height: 40vh;
     height: 400px;
-    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    padding-top: 5vh;
     border-bottom: solid var(--negro) 3PX;
     position: absolute;
+        overflow: hidden;
+
+}
+.header_continer video{
+margin-top: -7%;
+    width: 100%;
+    position: absolute;
+    filter: brightness(0.5) blur(5px);
 }
 
 .logo {
@@ -89,7 +95,7 @@ h2 {
     margin: 0;
     padding: 0;
     z-index: 100;
-
+position: absolute;
 }
 
 .contenedor_boton_opciones {
@@ -258,6 +264,11 @@ h2 {
     box-shadow: #4A1A1A 0px 5px 15px;
 }
 
+.contenedor_opcion_redes img{
+    width: 50px;
+    max-width: 100%;
+
+}
 @media only screen and (min-width: 768px) {
 
     .barra_opciones {
@@ -1260,6 +1271,7 @@ background: linear-gradient(148deg, rgba(74, 26, 26, 1) 0%, rgba(110, 0, 0, 1) 5
     border-radius: 20px;
     margin: 20px;
     text-align: center;
+    width: 80%;
 }
 
 .metodo_de_pago h4 {
@@ -1420,7 +1432,6 @@ text-align: center;
 
 .hecho_por {
     padding: 10px;
-    font-family: "UnifrakturMaguntia", cursive;
     margin: 0;
     font-size: 1.5rem;
     color: var(--gris_claro_metalico);
@@ -1428,13 +1439,110 @@ text-align: center;
 
 .nombre_abrahan {
     text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.78);
     color: var(--gris_claro_metalico);
-    border: solid 3px var(--gris_claro_metalico);
+    border: solid 1px rgba(0, 255, 255, 0.78);
     border-radius: 20px;
     padding: 10px;
     margin: 0px;
-    background-color: var(--Vinotinto);
+    background-color: transparent;
+    animation: linear infinite abrahanneon ;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    cursor: pointer;
 }
+.nombre_abrahan samp{
+    opacity: 0;
+    animation: parpadeo 4s infinite linear;
+    transition: none;
+
+}
+
+
+
+@keyframes parpadeo{
+0%{
+    opacity: 1;
+}
+1%{
+    opacity: 0;
+}
+4%{
+    opacity: 1;
+}
+60%{
+    opacity: 1;
+}
+63%{
+    opacity: 0;
+}
+68%{
+    opacity: 1;
+}
+80%{
+    opacity: 1;
+}
+100%{
+    opacity: 1;
+}
+}
+
+@keyframes abrahanneon{
+    10%{
+    box-shadow: 1px 1px 6px 0px rgba(0, 255, 255, 0.78), inset 2px -3px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    20%{
+        box-shadow: 3px 3px 6px 0px rgba(0, 255, 255, 0.78), inset -4px -3px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    30%{
+        box-shadow: 4px 0px 6px 0px rgba(0, 255, 255, 0.78), inset -5px -2px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    40%{
+        box-shadow: 4px -2px 6px 0px rgba(0, 255, 255, 0.78), inset -5px 1px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    42%{
+        box-shadow: 4px -2px 6px 0px rgba(78, 78, 78, 0.78), inset 0px 0px 0px 0px rgba(40, 44, 44, 0.78);    
+    }
+      45%{
+        box-shadow: 4px -2px 6px 0px rgba(0, 255, 255, 0.78), inset -5px 1px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    50%{
+        box-shadow: 2px -2px 6px 0px rgba(0, 255, 255, 0.78), inset -3px 1px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+    60%{
+        box-shadow: 1px -3px 6px 0px rgba(0, 255, 255, 0.78), inset -2px 3px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+     70%{
+        box-shadow: -4px -2px 6px 0px rgba(0, 255, 255, 0.78), inset 2px 5px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+
+     80%{
+            box-shadow: -6px 3px 6px 0px rgba(0, 255, 255, 0.78), inset 5px 0px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+
+     90%{
+            box-shadow: -3px 5px 6px 0px rgba(0, 255, 255, 0.78), inset 5px 0px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+     92%{
+            box-shadow: 1px 3px 6px 0px rgba(0, 255, 255, 0.78), inset 2px -2px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+     93%{
+        box-shadow: 4px -2px 6px 0px rgba(78, 78, 78, 0.78), inset 0px 0px 0px 0px rgba(40, 44, 44, 0.78);    
+    }
+       95%{
+            box-shadow: 1px 3px 6px 0px rgba(0, 255, 255, 0.78), inset 2px -2px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+     97%{
+        box-shadow: 4px -2px 6px 0px rgba(78, 78, 78, 0.78), inset 0px 0px 0px 0px rgba(40, 44, 44, 0.78);    
+    }
+         100%{
+            box-shadow: 1px 3px 6px 0px rgba(0, 255, 255, 0.78), inset 2px -2px 6px 0px rgba(0, 255, 255, 0.78);
+    }
+
+
+}
+
+
 
 .redes_footer {
     background-color: var(--Vinotinto_claro);
@@ -1444,6 +1552,7 @@ text-align: center;
 .redes_footer img {
     max-width: 40px;
     margin: 0 5px 0 5px;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1497,7 +1606,6 @@ text-align: center;
         border-radius: 20px;
         padding: 10px;
         margin: 0px;
-        background-color: var(--Vinotinto);
     }
 
     .redes_footer {
